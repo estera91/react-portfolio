@@ -1,0 +1,23 @@
+/* FullScreenSection.css */
+.VStack {
+    width: 100%;
+  }
+  
+  .VStack > div {
+    max-width: 100%;
+  }
+  
+  @media screen and (min-width: 600px) {
+    .VStack > div {
+      padding-left: 8px;
+     padding-right: 8px;
+    }
+  }
+  
+  @media screen and (min-width: 960px) {
+    .VStack > div {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+  

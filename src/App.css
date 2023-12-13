@@ -1,0 +1,50 @@
+/* Default styles */
+.App {
+  text-align: center;
+}
+
+.fullbody {
+  width: 100%;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #af9094;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  /* Styles for tablet size screen and below */
+  .App-header {
+    font-size: calc(10px + 1.5vmin);
+  }
+}
+
+@media (max-width: 480px) {
+  /* Styles for phone size screen and below */
+  .App-header {
+    font-size: calc(10px + 1vmin);
+  }
+}
