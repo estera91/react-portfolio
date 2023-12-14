@@ -23,7 +23,7 @@ const AnimatedSections = () => {
   };
   const projects = [ 
     { 
-      text: "Text o mnie, Text o mnie,Text o mnie,Text o mnie,Text o mnie,Text o mnie Text o mnie, Text o mnie,Text o mnie,Text o mnie,Text o mnie,Text o mni Text o mnie, Text o mnie,Text o mnie,Text o mnie,Text o mnie,Text o mni Text o mnie, Text o mnie,Text o mnie,Text o mnie,Text o mnie,Text o mni Text o mnie, Text o mnie,Text o mnie,Text o mnie,Text o mnie,Text o mni", 
+      text: "I'am experienced IT Specialist adept in web development, security, and client support. Skilled in creating websites (Wordpress, Wix, Bitrix, React, Yii). Proficient in HTML5, CSS, JavaScript, PHP, REACT, JQuery, REST API and server management (Apache2, PhpMyAdmin). Demonstrated problem-solving across Windows, MAC, and Linux. Strong in network setup, routers, VPNs, and CPanel management.", 
       speed: "100"
     }, 
   ]
@@ -46,6 +46,7 @@ const AnimatedSections = () => {
         fontFamily="Helvetica"
         opacity="0.8"
         
+        
         // Adjust the values as needed
       >
         Estera Bulkiewicz 
@@ -53,8 +54,8 @@ const AnimatedSections = () => {
       </Heading>
 
 
-      <Center h="40vh" className="animated-sections-container" overflow="hidden">
-        <Box flex="60%" p="20px" bg="#f5f5f5   " animation="slideInLeft 1s ease-in-out" marginLeft='50px' fontSize="25px">
+      <Center  className="animated-sections-container" overflow="hidden">
+        <Box flex="60%" p="20px" bg="#f5f5f5" className="textDescBox"  animation="slideInLeft 1s ease-in-out" marginLeft='50px' fontSize="25px">
          
           {projects.map((project) => ( 
          <TypingAnimation 

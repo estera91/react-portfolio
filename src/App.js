@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import LandingSection from "./components/LandingSection";
 import ProjectsSection from './components/ProjectsSection';
 import ExperienceSection from './components/ExperienceSection';
+import ContactMe from './components/ContactMeSection.js'
 
 import './App.css';
 
@@ -24,6 +25,8 @@ function App() {
         <LandingSection />
         <ProjectsSection />
         <ExperienceSection />
+        <ContactMe />
+        
       
       </main>
     </ChakraProvider>

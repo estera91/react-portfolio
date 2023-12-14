@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import '../css/TypingAnimation.css'; // Import the CSS file for styling
+import {Text} from '@chakra-ui/react'
 
 const TypingAnimation = ({ text, speed }) => {
   const [displayedText, setDisplayedText] = useState('');
@@ -19,17 +20,20 @@ const TypingAnimation = ({ text, speed }) => {
     return () => clearInterval(intervalId);
   }, [text, speed]);
 
-  useEffect(() => {
+ // useEffect(() => {
     // Adjust the width of the div to fit the text
-    if (animationBoxRef.current) {
-      const textWidth = animationBoxRef.current.scrollWidth;
-      animationBoxRef.current.style.width = `${textWidth}px`;
-    }
-  }, [displayedText]);
+//    if (animationBoxRef.current) {
+ //     const textWidth = animationBoxRef.current.scrollWidth;
+ //     animationBoxRef.current.style.width = `${textWidth}px`;
+ //   }
+ // }, [displayedText]);
 
   return (
     <div className="typing-animation-box" ref={animationBoxRef}>
+      <Text width="100%" fontSize="20px">
       {displayedText}
+      </Text>
+      
     </div>
   );
 };

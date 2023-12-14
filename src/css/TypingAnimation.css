@@ -18,8 +18,12 @@
     font-size: 14px; /* Adjust font size for small screens */
   }
   .typing-animation-box{
-    padding-top:40px;
-    height:auto;
+    padding-top:10px;
+    height:280px;
+  }
+  .typing-animation-box p{
+    font-size:19px;
+    font-weight:normal;
   }
 }
 
@@ -29,12 +33,13 @@
   }
 }
 
-@media only screen and (min-width: 901px) and (max-width: 1025px) {
+@media only screen and (min-width: 901px) and (max-width: 1027px) {
   .typing-animation {
     font-size: 18px; /* Adjust font size for large screens */
   }
   .typing-animation-box{
     padding-top:50px !important;
+ 
   }
 }
 

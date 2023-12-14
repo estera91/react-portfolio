@@ -22,40 +22,37 @@ const projects = [
 ];
 
 const ProjectsSection = () => {
+  const isLargeScreen = window.innerWidth > 800;
+
   return (
     <FullScreenSection
       backgroundColor="#b8e5ea"
       isDarkBackground
       p={4}
-    //  alignItems="flex-start"
-  //    spacing={8}
     >
       <Center width="100%">
-      <Heading
-        as="h1"
-      //  align="center"
-        textAlign="center"
-      //  py="2"
-      //  size="lg"
-        width="100%" // Set the width to 100% for full width
-        paddingTop="50px"
-        paddingBottom="40px"
-        marginTop="40px"
-        marginBottom="30px"
-        color="white"
-        fontSize="80px"
-        fontFamily="Helvetica"
-        backgroundColor="Black"
-     
-      >
-        My projects:
-      </Heading>
+        <Heading
+          as="h1"
+          textAlign="center"
+          width="100%"
+          paddingTop={isLargeScreen ? "50px" : "20px"}
+          paddingBottom="40px"
+          marginTop="40px"
+          marginBottom="30px"
+          color="white"
+          fontSize="80px"
+          fontFamily="Helvetica"
+          backgroundColor="Black"
+          opacity="1"
+        >
+          My projects:
+        </Heading>
       </Center>
       <Box
-        width="100%" // Set the width to 100% for full width
-        display="grid"
-        gridTemplateColumns="repeat(2, minmax(0, 1fr))"
-        gridGap={15}
+        width="100%"
+        display={isLargeScreen ? "grid" : "block"}
+        gridTemplateColumns={isLargeScreen ? "repeat(2, minmax(0, 1fr))" : "auto"}
+        gridGap={isLargeScreen ? 15 : 0}
       >
         {projects.map((project) => (
           <Card
