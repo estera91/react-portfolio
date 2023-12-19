@@ -10,17 +10,17 @@ import {
 import { Box, HStack } from "@chakra-ui/react"; 
  
 const socials = [ 
- { 
+ /*{ 
    icon: faEnvelope, 
    url: "mailto: estelaszwar@protonmail.com", 
- }, 
+ },*/ 
  { 
    icon: faGithub, 
-   url: "https://www.github.com/sureskills", 
+   url: "https://github.com/estera91/react-portfolio", 
  }, 
  { 
    icon: faLinkedin, 
-   url: "https://www.linkedin.com/in/sureskills/", 
+   url: "https://www.linkedin.com/in/estera-bulkiewicz-83789a122/?originalSubdomain=pl", 
  }, 
  
 
@@ -108,6 +108,7 @@ useEffect(() => {
  return ( 
    <Box 
    position="fixed"
+   bgColor="black"
    top={0}
    left={0}
    right={0}
@@ -115,11 +116,11 @@ useEffect(() => {
    transitionProperty="transform"
    transitionDuration=".3s"
    transitionTimingFunction="ease-in-out"
-   backgroundColor="#18181b"
+   backgroundColor="black"
    ref={headerRef}
    zIndex="1000"
    > 
-     <Box color="white" maxWidth="1280px" margin="0 auto"> 
+     <Box color="white" maxWidth="1280px" margin="0 auto" bgColor="black"> 
        <HStack 
          px={16} 
          py={4} 
@@ -141,9 +142,12 @@ useEffect(() => {
            </HStack> 
          </nav> 
          <nav> 
-           <HStack spacing={8}> 
+           <HStack spacing={8} class="headerMenu"> 
              <a href="#projects" onClick={handleClick("projects")}> 
                Projects 
+             </a> 
+             <a href="#experience" onClick={handleClick("experience")}> 
+               Experience 
              </a> 
              <a href="#contactme" onClick={handleClick("contactme")}> 
                Contact Me 

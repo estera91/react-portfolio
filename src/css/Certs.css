@@ -6,13 +6,16 @@
   align-items: center;
   background-color: #faca6b; /* Set your background color */
   overflow: hidden;
+  font-size:20px
 }
 
 .cert-box img {
   max-width: 100%;
   object-fit: cover;
 }
-
+p{
+  font-size:20px !important;
+}
 /* Responsive styles */
 @media screen and (max-width: 500px) {
   .cert-box {
@@ -49,10 +52,13 @@
   object-fit: cover;
 }
 
-@media screen and (max-width: 1027px) {
+@media screen and (max-width: 12000px) {
   .cert-box {
     padding: 20px;
     width: 100%; /* Make each section take 100% width */
     height:100%;
+  }
+  p{
+    font-size:20px !important;
   }
 }

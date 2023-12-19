@@ -6,7 +6,7 @@
   overflow: hidden;
   color: black;
   width: 100%;
-  height: auto;
+  height: 300px;
   background-size: cover;
 }
 
@@ -14,12 +14,15 @@ h1 {
   font-family: Arial, Helvetica, sans-serif;
   
 }
+.Experience li{
+  font-size:20px
+}
 .textDescBox p{
   text-align: justify;
 text-justify: inter-word;
 }
 .sekcjajeden {
-  background-image: url('/public/backgroung.jpg');
+  background-image: url('/public/orange.jpg');
   width: 100%;
   margin-left: 0;
   margin-right: 0;
@@ -39,7 +42,7 @@ text-justify: inter-word;
 }
 
 .right-section {
-  background-color: #faca6b;
+ 
   margin-right: 5%;
   animation: slideInRight 1s ease-in-out;
   height:300px;
@@ -86,6 +89,20 @@ h1 {
   p {
     font-size: 15px;
   }
+  .CertText p{
+    font-size:20px !important;
+    padding-bottom: 30px;
+    text-align: left;
+    padding-left:20px;
+  }
+  .CertsHeading{
+    font-size:70px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .CertsContent{
+    padding-top:200px !important;
+  }
+
   .animated-sections-container{
 
     padding-top:20px;
@@ -162,10 +179,13 @@ h1 {
     width: 100%;
     font-size: 50px !important; /* Adjust font size as needed */
     margin-bottom: 80px !important;
+    opacity:1 !important
   }
+ 
   .textDescBox{
     min-height:350px;
     margin-bottom:40px;
+    opacity:1 !important;
   }
   .textDescBox p{
     font-size:20px
@@ -174,11 +194,24 @@ h1 {
     font-size: 20px;
   
   }
+  .CertText p{
+    font-size:18px !important;
+    padding-bottom: 30px;
+    text-align: left;
+    padding-left:20px;
+  }
+  .CertsHeading{
+    font-size:70px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .CertsContent{
+    padding-top:200px !important;
+  }
   .animated-sections-container div{
     padding-top:20px;
     margin-left:0px !important;
     width:100%;
-    margin-bottom:50px !important;
+    margin-bottom:90px !important;
 
   }
   .animated-sections-container img{

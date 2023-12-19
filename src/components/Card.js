@@ -53,10 +53,12 @@ const Card = ({ title, description, imageSrc, url, clickImage }) => {
       color="black"
       backgroundColor="white"
       cursor={clickImage ? "pointer" : "default"}
-      borderRadius="xl"
       width="100%"
       onClick={handleClick}
       marginBottom="30px"
+      padding="20px 20px 20px 20px"
+      bg="orange"
+      borderRadius="9px"
       
     >
       <Image borderRadius="xl" src={imageSrc} alt={title}  />
@@ -66,12 +68,12 @@ const Card = ({ title, description, imageSrc, url, clickImage }) => {
             {title}
           </Heading>
         </HStack>
-        <Text color="#64748b" fontSize="lg">
+        <Text color="black" fontSize="25px">
           {description}
         </Text>
         <HStack spacing={2} alignItems="center" w="100%">
           {url && (
-            <Link href={url} isExternal>
+            <Link href={url} isExternal bg="black" color="white" fontSize="25px" paddingLeft="10px" paddingRight="10px" borderRadius="9px">
               See more
             </Link>
           )}

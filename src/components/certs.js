@@ -1,51 +1,65 @@
-// Certs.js
+// Import necessary packages
 import React from 'react';
-import { VStack, Image } from '@chakra-ui/react';
-import { useSpring, animated } from 'react-spring';
-import { useInView } from 'react-intersection-observer';
-import '../css/Certs.css';
-
-const Certs = () => {
-  const [ref1, inView1] = useInView({
-    triggerOnce: true,
-  });
-
-  const [ref2, inView2] = useInView({
-    triggerOnce: true,
-  });
-
-  const [ref3, inView3] = useInView({
-    triggerOnce: true,
-  });
-
-  const slideInLeftProps = useSpring({
-    opacity: inView1 ? 1 : 0,
-    transform: inView1 ? 'translateX(0%)' : 'translateX(-100%)',
-  });
-
-  const slideInRightProps = useSpring({
-    opacity: inView2 ? 1 : 0,
-    transform: inView2 ? 'translateX(0%)' : 'translateX(100%)',
-  });
-
-  const rotateInProps = useSpring({
-    opacity: inView3 ? 1 : 0,
-    transform: inView3 ? 'rotate(0deg)' : 'rotate(360deg)',
-  });
-
+import { Box, Grid, Image, Text, Container,Heading } from '@chakra-ui/react';
+import ShowPhotos from './ShowPhotos.js'
+// Define your component
+const MyComponent = () => {
+  const images = [
+    process.env.PUBLIC_URL + '/JavaScriptcert.jpg',
+    process.env.PUBLIC_URL + '/networkcert.jpg',
+    process.env.PUBLIC_URL + '/reactcert.jpg',
+    process.env.PUBLIC_URL + '/ibm.png',
+    process.env.PUBLIC_URL + '/ang.png',
+    process.env.PUBLIC_URL + '/ccna.png',
+    // Add more image URLs as needed
+  ];
+  
   return (
-    <VStack h="200vh" spacing={4}>
-      <animated.div style={slideInLeftProps} ref={ref1} className="cert-box">
-        <Image src={process.env.PUBLIC_URL + '/JavaScriptcert.jpg'} alt="Section 1" />
-      </animated.div>
-      <animated.div style={slideInRightProps} ref={ref2} className="cert-box">
-        <Image src={process.env.PUBLIC_URL + '/networkcert.jpg'} alt="Section 2" />
-      </animated.div>
-      <animated.div style={rotateInProps} ref={ref3} className="cert-box">
-        <Image src={process.env.PUBLIC_URL + '/reactcert.jpg'} alt="Section 3" />
-      </animated.div>
-    </VStack>
+    <Box bgColor="black" color="white" p={8}  className="CertsContent">
+      <Grid templateColumns="1fr 1fr" gap={8}>
+        {/* Section 1: Photo Gallery with Certificates */}
+        <Box>
+          <ShowPhotos imageUrls={images}  bg="black" />
+        </Box>
+
+        {/* Section 2: Text inside an Orange Container */}
+        <Container
+          
+          maxWidth="500px"
+          p={6}
+          textAlign="center"
+          
+          paddingTop="0px"
+        >
+          <Heading className="CertsHeading">
+            Let's learn!
+          </Heading>
+          <Text
+         // bgColor="#df7d00"
+          bgColor="black"
+          color="white"
+          paddingTop="30px"
+           fontSize="20px"
+          borderRadius="9px"
+          className="CertText"
+          >
+            <p fontSize="20px">Welcome to my journey of perpetual growth and exploration as a IT specialist and web developer.
+            </p>
+            <p>
+             I have an insatiable thirst for learning, a passion that drives me to continually expand my knowledge and refine my skills. In this dynamic digital landscape, each certificate and course completed represents a stepping stone in my ongoing pursuit of excellence.
+             </p>
+            <p>
+          As I navigate the world of web development, I enthusiastically embrace challenges, seeking opportunities to delve deeper into the intricacies of the field. 
+          </p>
+          <p>
+          My commitment to staying at the forefront of technology is mirrored in the various achievements along the way.
+          </p>
+          </Text>
+        </Container>
+      </Grid>
+    </Box>
   );
 };
 
-export default Certs;
+// Export your component
+export default MyComponent;

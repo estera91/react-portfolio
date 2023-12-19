@@ -1,33 +1,44 @@
+/**
+ * AnimatedSections Component
+ *
+ * This component represents a section of the webpage with animated content and styling.
+ * It includes a heading with the name and role of the web developer, along with a description box
+ * containing a TypingAnimation component for showcasing a project description.
+ *
+ * @component
+ * @returns {JSX.Element} - Returns a React element representing the animated sections.
+ */
+
 import React from 'react';
 import '../css/AnimatedSections.css'; // Import your CSS file for styling
-import { Box, Center, Heading, Text, Image } from '@chakra-ui/react';
+import { Box, Center, Heading, Image } from '@chakra-ui/react';
 import TypingAnimation from './TypingAnimation';
 
-
-
-
+/**
+ * @function AnimatedSections
+ *
+ * @returns {JSX.Element} - Returns a React element representing the animated sections.
+ */
 const AnimatedSections = () => {
 
-
-
+  // Styles for the background image and overall section
   const pageStyles = {
-    backgroundImage: "%PUBLIC_URL%/backgroung.jpg",
+    backgroundImage: "%PUBLIC_URL%/orange.jpg", // Adjust the path to your background image
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center center',
     minHeight: '100vh',
-    
-   // opacity:"0.8"
-
-  
   };
+
+  // Project details for TypingAnimation
   const projects = [ 
     { 
-      text: "I'am experienced IT Specialist adept in web development, security, and client support. Skilled in creating websites (Wordpress, Wix, Bitrix, React, Yii). Proficient in HTML5, CSS, JavaScript, PHP, REACT, JQuery, REST API and server management (Apache2, PhpMyAdmin). Demonstrated problem-solving across Windows, MAC, and Linux. Strong in network setup, routers, VPNs, and CPanel management.", 
-      speed: "100"
+      text: "I am an experienced IT Specialist adept in web development, security, and client support. Skilled in creating websites (Wordpress, Wix, Bitrix, React, Yii). Proficient in HTML5, CSS, JavaScript, PHP, REACT, JQuery, REST API, and server management (Apache2, PhpMyAdmin). Demonstrated problem-solving across Windows, MAC, and Linux. Strong in network setup, routers, VPNs, and CPanel management.", 
+      speed: "50"
     }, 
-  ]
+  ];
 
+  // Render the animated sections
   return (
     <div style={pageStyles} className="sekcjajeden" >
       <Heading
@@ -45,30 +56,27 @@ const AnimatedSections = () => {
         fontSize="100px" 
         fontFamily="Helvetica"
         opacity="0.8"
-        
-        
-        // Adjust the values as needed
       >
         Estera Bulkiewicz 
-       <p font-size="15px">Web Developer</p> 
+        <p font-size="15px">Web Developer - IT Specialist</p> 
       </Heading>
 
-
-      <Center  className="animated-sections-container" overflow="hidden">
-        <Box flex="60%" p="20px" bg="#f5f5f5" className="textDescBox"  animation="slideInLeft 1s ease-in-out" marginLeft='50px' fontSize="25px">
-         
+      {/* Animated Sections Container */}
+      <Center className="animated-sections-container" overflow="hidden">
+        {/* Description Box */}
+        <Box flex="60%" p="20px" bg="black" opacity="0.8" color="white" className="textDescBox"  animation="slideInLeft 1s ease-in-out" marginLeft='50px' fontSize="25px">
           {projects.map((project) => ( 
-         <TypingAnimation 
-           text={project.text} 
-           speed={project.speed} 
-      
-         /> 
-       ))} 
+            <TypingAnimation 
+              text={project.text} 
+              speed={project.speed} 
+            /> 
+          ))}
         </Box>
+
+        {/* Right Section with Image */}
         <Box
           flex="40%"
           p="20px"
-          bg="#faca6b"
           animation="slideInRight 1s ease-in-out"
           position="relative"
         >
@@ -77,7 +85,7 @@ const AnimatedSections = () => {
               position="absolute"
               padding="10px 10px 10px 10px"
               borderRadius="50%"
-              border="2px dashed #555"
+              border="2px dashed #df7d00"
               pointerEvents="none"
               src="https://iprivateer.com/wp-content/uploads/2023/12/estera.png"
               alt="Right Section"
@@ -85,10 +93,7 @@ const AnimatedSections = () => {
           </Center>
         </Box>
       </Center>
-
     </div>
-    
-    
   );
 };
 

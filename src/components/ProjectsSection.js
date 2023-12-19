@@ -26,11 +26,12 @@ const ProjectsSection = () => {
 
   return (
     <FullScreenSection
-      backgroundColor="#b8e5ea"
+      backgroundColor="black"
       isDarkBackground
       p={4}
+      marginTop="70px"
     >
-      <Center width="100%">
+      <Center width="100%" id="projects">
         <Heading
           as="h1"
           textAlign="center"
@@ -38,14 +39,14 @@ const ProjectsSection = () => {
           paddingTop={isLargeScreen ? "50px" : "20px"}
           paddingBottom="40px"
           marginTop="40px"
-          marginBottom="30px"
+          marginBottom="90px"
           color="white"
           fontSize="80px"
           fontFamily="Helvetica"
-          backgroundColor="Black"
+        //  backgroundColor="#df7d00"
           opacity="1"
         >
-          My projects:
+          WEB projects
         </Heading>
       </Center>
       <Box
@@ -62,6 +63,8 @@ const ProjectsSection = () => {
             imageSrc={project.getImageSrc()}
             url={project.url}
             clickImage={project.clickImage}
+
+            
           />
         ))}
       </Box>

@@ -1,11 +1,51 @@
 import React from 'react';
-import { Box, Image, Flex, SimpleGrid, useMediaQuery } from '@chakra-ui/react';
+import {
+  Box,
+  Image,
+  Flex,
+  SimpleGrid,
+  useMediaQuery,
+  useDisclosure,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+} from '@chakra-ui/react';
+import '../css/ShowPhotos.css'
 
 const ImageGallery = ({ imageUrls }) => {
-  const [isLargeScreen] = useMediaQuery("(min-width: 50em)");
+
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [selectedImage, setSelectedImage] = React.useState(null);
+
+  const openModal = (imageUrl) => {
+    setSelectedImage(imageUrl);
+    onOpen();
+  };
+
+  const closeModal = () => {
+    setSelectedImage(null);
+    onClose();
+  };
+  const handleCloseModal = () => {
+    onClose();
+  };
+  const handleContentClick = (event) => {
+    event.stopPropagation();
+  };
+
+  const [isLargeScreen, isTabletScreen, isPhoneScreen] = useMediaQuery([
+    "(min-width: 50em)",
+    "(min-width: 30em) and (max-width: 50em)",
+    "(max-width: 30em)",
+  ]);
+
 
   return (
-    <Box p={4}>
+    <Box p={4} paddingTop="50px" paddingBottom="50px">
       {isLargeScreen ? (
         <SimpleGrid columns={[1, 2, 3]} spacing={4}>
           {imageUrls.map((imageUrl, index) => (
@@ -14,15 +54,16 @@ const ImageGallery = ({ imageUrls }) => {
               alignItems="center"
               justifyContent="center"
               style={{
-                width: '100%', // Full width for small screens
+                width: '100%',
                 '@media screen and (min-width: 40em)': {
-                  width: '50%', // Adjusted width for medium screens (tablets)
+                  width: isTabletScreen ? '50%' : '33.33%',
                 },
                 '@media screen and (min-width: 60em)': {
-                  width: '33.33%', // Adjusted width for large screens
+                  width: isLargeScreen ? '33.33%' : isTabletScreen ? '50%' : '100%',
                 },
-                marginTop: '20px', // Margin top for each image
+                marginTop: isLargeScreen ? '20px' : '10px',
               }}
+              onClick={() => openModal(imageUrl)}
             >
               <Image
                 src={imageUrl}
@@ -41,6 +82,7 @@ const ImageGallery = ({ imageUrls }) => {
             alignItems="center"
             justifyContent="center"
             style={{ width: '100%', marginTop: '50px' }}
+            onClick={() => openModal(imageUrl)}
           >
             <Image
               src={imageUrl}
@@ -53,6 +95,30 @@ const ImageGallery = ({ imageUrls }) => {
           </Flex>
         ))
       )}
+
+      {/* Modal */}
+      <Modal isOpen={isOpen} onClose={closeModal}  className="modalGallery" bg="black">
+        <ModalOverlay />
+        <ModalContent 
+       
+        className='gallery-item'>
+          <ModalHeader textAlign="center">Image Preview</ModalHeader>
+          <ModalCloseButton  top="-25px"   color="white" paddingTop="40px"/>
+          <ModalBody onClick={handleContentClick}>
+            <Flex alignItems="center" justifyContent="center">
+              <Image
+                src={selectedImage}
+                alt="Image Preview"
+              
+                maxH="70vh"
+                objectFit="contain"
+                borderRadius="md"
+              />
+            </Flex>
+          </ModalBody>
+          <ModalFooter />
+        </ModalContent>
+      </Modal>
     </Box>
   );
 };

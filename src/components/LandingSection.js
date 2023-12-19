@@ -29,7 +29,7 @@ const LandingSection = () => (
     justifyContent="center"
     alignItems="center"
     isDarkBackground
-    backgroundColor="#faca6b"
+    backgroundColor="black"
     fontFamily="Arial"
     maxW="100%"
     right="0px"
@@ -39,8 +39,8 @@ const LandingSection = () => (
       <VStack spacing={4} alignItems="center" w="100%">
         <AnimatedSections  data-background={pictureRights} />
       {/*  <AnimatedImage imagePath={require("../photos/na_feb_36.png")} imageRight={pictureRight2} />*/}
-      {/*  <Certs height="50vh" />*/}
-      <ShowPhotos imageUrls={images} />
+       <Certs height="50vh" />*
+      {/*<ShowPhotos imageUrls={images}  bg="black"/>*/}
       </VStack>
       <VStack spacing={6} w="100%">
         {/* Additional content for the second VStack */}
