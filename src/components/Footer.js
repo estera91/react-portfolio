@@ -18,7 +18,7 @@ const Footer = () => {
           paddingBottom="40px"
         
         >
-          <p>Estera Bulkiewicz - REACT code • © 2023</p>
+          <p>Estera Bulkiewicz - REACT code • © 2024</p>
         </Flex>
       </footer>
     </Box>

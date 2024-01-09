@@ -6,7 +6,7 @@
   overflow: hidden;
   color: black;
   width: 100%;
-  height: 300px;
+  height: 380px;
   background-size: cover;
 }
 
@@ -22,7 +22,7 @@ h1 {
 text-justify: inter-word;
 }
 .sekcjajeden {
-  background-image: url('/public/orange.jpg');
+  background-image: url('/public/img/orange.jpg');
   width: 100%;
   margin-left: 0;
   margin-right: 0;
@@ -49,7 +49,7 @@ text-justify: inter-word;
 }
 .textDescBox{
   min-height:170px;
-  height:170px;
+  height:200px;
 }
 @keyframes slideInLeft {
   from {
@@ -211,7 +211,7 @@ h1 {
     padding-top:20px;
     margin-left:0px !important;
     width:100%;
-    margin-bottom:90px !important;
+    margin-bottom:140px !important;
 
   }
   .animated-sections-container img{

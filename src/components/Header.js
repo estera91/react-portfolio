@@ -143,6 +143,12 @@ useEffect(() => {
          </nav> 
          <nav> 
            <HStack spacing={8} class="headerMenu"> 
+            <a href="#skills" onClick={handleClick("contactme")}> 
+               Skills 
+             </a>
+             <a href="#certs" onClick={handleClick("contactme")}> 
+               Certificats
+             </a>
              <a href="#projects" onClick={handleClick("projects")}> 
                Projects 
              </a> 

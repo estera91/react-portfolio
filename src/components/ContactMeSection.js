@@ -18,7 +18,7 @@ import {
 import ReCAPTCHA from 'react-google-recaptcha';
 import AnimatedImage from './AnimatedImage';
 const pictureRight2='<a href="https://www.freepik.com/free-vector/black-neural-network-illustration_3841810.htm#query=computer%20contact%20black%20white%20black%20background%20vector&position=34&from_view=search&track=ais&uuid=304fa186-ec32-4c11-8c17-624bcefc05b3">Image by rawpixel.com</a> on Freepik'
-const src1=process.env.PUBLIC_URL + '/netw.png'
+const src1=process.env.PUBLIC_URL + '/img/netw.png'
 
 const schema = Yup.object().shape({
   name: Yup.string().required('Name is required'),
@@ -62,22 +62,22 @@ const ContactForm = () => {
         <Container maxWidth="600px">
         <form onSubmit={handleSubmit(onSubmit)} marginBottom="50px" maxWidth="300px"  >
           <FormControl isInvalid={formState.errors.name} >
-            <Input placeholder="Name" {...register('name')} borderRadius="7px"marginBottom="10px" />
+            <Input placeholder="Name" {...register('name')} height="40px" bgColor="black" opacity="0.8" borderRadius="7px"marginBottom="10px" />
             <FormErrorMessage>{formState.errors.name?.message}</FormErrorMessage>
           </FormControl>
 
           <FormControl mt={4} isInvalid={formState.errors.email}>
-            <Input type="email" placeholder="Email" {...register('email')} borderRadius="7px"marginBottom="10px" />
+            <Input type="email" placeholder="Email" {...register('email')} height="40px" bgColor="black" opacity="0.8" borderRadius="7px"marginBottom="10px" />
             <FormErrorMessage>{formState.errors.email?.message}</FormErrorMessage>
           </FormControl>
 
           <FormControl mt={4} isInvalid={formState.errors.subject}>
-            <Input placeholder="Subject" {...register('subject')}borderRadius="7px"marginBottom="10px" />
+            <Input placeholder="Subject" {...register('subject')} height="40px" bgColor="black" opacity="0.8" borderRadius="7px"marginBottom="10px" />
             <FormErrorMessage>{formState.errors.subject?.message}</FormErrorMessage>
           </FormControl>
 
           <FormControl mt={4} isInvalid={formState.errors.message}>
-            <Textarea placeholder="Message" {...register('message')}borderRadius="7px"marginBottom="10px" />
+            <Textarea placeholder="Message" {...register('message')} height="100px" bgColor="black" opacity="0.8" borderRadius="7px"marginBottom="10px" />
             <FormErrorMessage>{formState.errors.message?.message}</FormErrorMessage>
           </FormControl>
 

@@ -78,19 +78,19 @@ const ExperienceSection = () => {
                   Responsibilities : 
                   <ul>
                     <li>
-                    -Creating  websites based on Wordpress, Wix, Bitrix
+                    Creating  websites based on Wordpress, Wix, Bitrix
                     </li>
-                    <li>-Implementing security for websites with technology Cloudflare</li>
-                    <li>-Managing server Apache2, PHPMyAdmin</li>
-                    <li>-writing code in projects with : HTML5, CSS, JavaScript, PHP, JQuery, REST, REACT 
+                    <li>Implementing security for websites with technology Cloudflare</li>
+                    <li>Managing server Apache2, PHPMyAdmin</li>
+                    <li>Writing code in projects with : HTML5, CSS, JavaScript, PHP, JQuery, REST, REACT 
                                   API, MySQL, Bash, XML</li>
-                    <li>-writing code for Unit tests</li>
-                    <li>-knowledge about frameworks: YII, Symfony</li>
-                    <li>-Setting up  security on customers computers (Windows, MAC, Linux)</li>
-                    <li>-Resolving computers problems (Windows, Linux, MAC)</li>
-                    <li>-creating local networks, setting up routers, VPN</li>
-                    <li>-Managing CPanel</li>
-                    <li>-Working with clients
+                    <li>Writing code for Unit tests</li>
+                    <li>Knowledge about frameworks: YII, Symfony</li>
+                    <li>Setting up  security on customers computers (Windows, MAC, Linux)</li>
+                    <li>Resolving computers problems (Windows, Linux, MAC)</li>
+                    <li>Creating local networks, setting up routers, VPN</li>
+                    <li>Managing CPanel</li>
+                    <li>Working with clients
                     </li>
                   </ul>
                 </p>
@@ -128,25 +128,25 @@ const ExperienceSection = () => {
                   Responsibilities : 
                   <ul>
                     <li>
-                    - Creating web applications with 
+                     Creating web applications with 
 using framework Yii,Yii2 using PHP(OOP,MVC), JavaScript, JQuery, HTML5, 
 CSS , Angular
                     </li>
-                    <li>- Writing projects in  Symfony2, Yii2</li>
-                    <li>- Writing and managing 
+                    <li>Writing projects in  Symfony2, Yii2</li>
+                    <li>Writing and managing 
 Application Programming Interface (API, REST API)</li>
-                    <li>-writing code in projects with : HTML5, CSS, JavaScript, PHP, JQuery, REST, REACT 
+                    <li>Writing code in projects with : HTML5, CSS, JavaScript, PHP, JQuery, REST, REACT 
                                   API, MySQL, Bash, XML</li>
-                    <li>- Creation and 
+                    <li>Creation and 
 maintenance XML, JSON data and integrations</li>
-                    <li>-Ceating documentations </li>
-                    <li>-Creating relational databases in MySql</li>
-                    <li>-Management and configuration 
+                    <li>Ceating documentations </li>
+                    <li>Creating relational databases in MySql</li>
+                    <li>Management and configuration 
 of APACHE, PHP My Admin</li>
-                    <li>-Working with 
+                    <li>Working with 
 GIT, VIM , Workbench</li>
-                    <li>-Working and providing with e-commerce projects</li>
-                    <li>-Programming with Agile metodology
+                    <li>Working and providing with e-commerce projects</li>
+                    <li>Programming with Agile metodology
                     </li>
                   </ul>
                 </p>
@@ -188,19 +188,19 @@ GIT, VIM , Workbench</li>
                     Creating web applications based on framework (MVC) 
 line Yii, Yii2 using languages PHP(OOP), JavaScript, JQuery, HTML5, CSS3
                     </li>
-                    <li>- Creating dedicated modules and extensions (using composer)</li>
-                    <li>- Preparing templates for newsletters and Landing pages</li>
-                    <li>- Creating 
+                    <li>Creating dedicated modules and extensions (using composer)</li>
+                    <li>Preparing templates for newsletters and Landing pages</li>
+                    <li>Creating 
 relational databases in MySql</li>
-                    <li>- Managing Database MySQL, PHPMyAdmin</li>
-                    <li>- Programming with version control using SVN, GIT (editor NetBeans)</li>
-                    <li>-Creating relational databases in MySql</li>
-                    <li>-Management and configuration 
+                    <li>Managing Database MySQL, PHPMyAdmin</li>
+                    <li>Programming with version control using SVN, GIT (editor NetBeans)</li>
+                    <li>Creating relational databases in MySql</li>
+                    <li>Management and configuration 
 of APACHE, PHP My Admin</li>
-                    <li>-Working with 
+                    <li>Working with 
 GIT, VIM , Workbench</li>
-                    <li> -Contact with the customer</li>
-                    <li>-Programming with Agile metodology
+                    <li> Contact with the customer</li>
+                    <li>Programming with Agile metodology
                     </li>
                   </ul>
                 </p>
@@ -239,11 +239,11 @@ GIT, VIM , Workbench</li>
                   Responsibilities : 
                   <ul>
                     <li>
-                    - Creating documentation for millitary applications and 
+                    Creating documentation for millitary applications and 
 modules in C language
 
                     </li>
-                    <li>- Looking for errors in application written in C language </li>
+                    <li>Looking for errors in application written in C language </li>
                   </ul>
                 </p>
               </Text>
@@ -280,13 +280,13 @@ modules in C language
                   Responsibilities : 
                   <ul>
                     <li>
-                    - Writing applications in language Clipper and In C#
+                    Writing applications in language Clipper and In C#
                     </li>
-                    <li>- Looking for errors in application written in C language </li>
-                    <li>- Technical support for applications</li>
-                    <li>- Creation of technical 
+                    <li>Looking for errors in application written in C language </li>
+                    <li>Technical support for applications</li>
+                    <li>Creation of technical 
 documentation for the libraries, programs, functions.</li>
-                    <li> - Writing the HTML 
+                    <li>Writing the HTML 
 interface libraries in C ++</li>
                   </ul>
                 </p>
@@ -324,13 +324,13 @@ interface libraries in C ++</li>
                   Responsibilities : 
                   <ul>
                     <li>
-                    - Writing applications in language Clipper and In C#
+                    Writing applications in language Clipper and In C#
                     </li>
-                    <li>- Looking for errors in application written in C language </li>
-                    <li>- Technical support for applications</li>
-                    <li>- Creation of technical 
+                    <li>Looking for errors in application written in C language </li>
+                    <li>Technical support for applications</li>
+                    <li>Creation of technical 
 documentation for the libraries, programs, functions.</li>
-                    <li> - Writing the HTML 
+                    <li>Writing the HTML 
 interface libraries in C ++</li>
                   </ul>
                 </p>
@@ -368,12 +368,12 @@ interface libraries in C ++</li>
                   Responsibilities : 
                   <ul>
                     <li>
-                    - Learning about programation in C++, Html, writing macros for Excel, bash
+                    Learning about programation in C++, Html, writing macros for Excel, bash
                     </li>
-                    <li>- Learning creation and management of databases in MySQL</li>
-                    <li>- Learning about basics of creating and managing networks </li>
-                    <li>- Learning how to use graphics programs, preparing banners, graphical interfaces for WEB</li>
-                    <li>- Science of electronic subsystems in computing devices, binary systems </li>
+                    <li>Learning creation and management of databases in MySQL</li>
+                    <li>Learning about basics of creating and managing networks </li>
+                    <li>Learning how to use graphics programs, preparing banners, graphical interfaces for WEB</li>
+                    <li>Science of electronic subsystems in computing devices, binary systems </li>
                     
                   </ul>
                 </p>

@@ -6,6 +6,7 @@ import ProjectsSection from './components/ProjectsSection';
 import ExperienceSection from './components/ExperienceSection';
 import ContactMe from './components/ContactMeSection.js'
 import Footer from './components/Footer.js'
+import ScrollButton from './components/Scroll.js'
 import './App.css';
 
 const theme = extendTheme({
@@ -31,9 +32,10 @@ function App() {
         <ContactMe />
          
         <Footer />
-        
+        <ScrollButton/>
       
       </main>
+      
     </ChakraProvider>
   );
 }

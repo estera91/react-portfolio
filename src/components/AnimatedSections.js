@@ -23,7 +23,7 @@ const AnimatedSections = () => {
 
   // Styles for the background image and overall section
   const pageStyles = {
-    backgroundImage: "%PUBLIC_URL%/orange.jpg", // Adjust the path to your background image
+    backgroundImage: "%PUBLIC_URL%/img/orange.jpg", // Adjust the path to your background image
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center center',
@@ -33,11 +33,11 @@ const AnimatedSections = () => {
   // Project details for TypingAnimation
   const projects = [ 
     { 
-      text: "I am an experienced IT Specialist adept in web development, security, and client support. Skilled in creating websites (Wordpress, Wix, Bitrix, React, Yii). Proficient in HTML5, CSS, JavaScript, PHP, REACT, JQuery, REST API, and server management (Apache2, PhpMyAdmin). Demonstrated problem-solving across Windows, MAC, and Linux. Strong in network setup, routers, VPNs, and CPanel management.", 
+      text: ' Hello, my name is Estera Bulkiewicz. With years of experience as an IT specialist, I have mastered web development, security, and client support. I can create sophisticated websites using various platforms, such as WordPress, Wix, Bitrix, React, and Yii. I am fluent in the most popular languages used in web development, such as HTML5, CSS, JavaScript, PHP, REACT, and JQuery. I also have a deep understanding of REST API and the management of servers, including Apache2 and PhpMyAdmin. Welcome to my portfolio ! ',
       speed: "50"
     }, 
   ];
-
+  const imgSrc = process.env.PUBLIC_URL + '/img/jay2.jpg';
   // Render the animated sections
   return (
     <div style={pageStyles} className="sekcjajeden" >
@@ -87,7 +87,7 @@ const AnimatedSections = () => {
               borderRadius="50%"
               border="2px dashed #df7d00"
               pointerEvents="none"
-              src="https://iprivateer.com/wp-content/uploads/2023/12/estera.png"
+              src={imgSrc}
               alt="Right Section"
             />
           </Center>

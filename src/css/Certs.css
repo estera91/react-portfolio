@@ -33,7 +33,9 @@ p{
     padding: 15px;
   }
 }
-
+.CertsHeading{
+  font-family:Arial, Helvetica, sans-serif
+}
 /* Certs.css */
 .cert-box {
   flex: 1;

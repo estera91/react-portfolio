@@ -5,17 +5,17 @@ import ShowPhotos from './ShowPhotos.js'
 // Define your component
 const MyComponent = () => {
   const images = [
-    process.env.PUBLIC_URL + '/JavaScriptcert.jpg',
-    process.env.PUBLIC_URL + '/networkcert.jpg',
-    process.env.PUBLIC_URL + '/reactcert.jpg',
-    process.env.PUBLIC_URL + '/ibm.png',
-    process.env.PUBLIC_URL + '/ang.png',
-    process.env.PUBLIC_URL + '/ccna.png',
+    process.env.PUBLIC_URL + '/img/JavaScriptcert.jpg',
+    process.env.PUBLIC_URL + '/img/networkcert.jpg',
+    process.env.PUBLIC_URL + '/img/reactcert.jpg',
+    process.env.PUBLIC_URL + '/img/ibm.png',
+    process.env.PUBLIC_URL + '/img/ang.png',
+    process.env.PUBLIC_URL + '/img/ccna.png',
     // Add more image URLs as needed
   ];
   
   return (
-    <Box bgColor="black" color="white" p={8}  className="CertsContent">
+    <Box id="certs" bgColor="black" color="white" p={8}  className="CertsContent">
       <Grid templateColumns="1fr 1fr" gap={8}>
         {/* Section 1: Photo Gallery with Certificates */}
         <Box>
@@ -31,7 +31,7 @@ const MyComponent = () => {
           
           paddingTop="0px"
         >
-          <Heading className="CertsHeading">
+          <Heading fontFamily="Arial" className="CertsHeading">
             Let's learn!
           </Heading>
           <Text
