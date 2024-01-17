@@ -1,0 +1,66 @@
+.cert-box {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #faca6b; /* Set your background color */
+  overflow: hidden;
+  font-size:20px
+}
+
+.cert-box img {
+  max-width: 100%;
+  object-fit: cover;
+}
+p{
+  font-size:20px !important;
+}
+/* Responsive styles */
+@media screen and (max-width: 500px) {
+  .cert-box {
+    padding: 10px;
+    width:100% !important;
+  
+  }
+  .cert-box img {
+    width:100% !important;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .cert-box {
+    padding: 15px;
+  }
+}
+.CertsHeading{
+  font-family:Arial, Helvetica, sans-serif
+}
+/* Certs.css */
+.cert-box {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #faca6b;
+  overflow: hidden;
+  
+}
+
+.cert-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 12000px) {
+  .cert-box {
+    padding: 20px;
+    width: 100%; /* Make each section take 100% width */
+    height:100%;
+  }
+  p{
+    font-size:20px !important;
+  }
+}

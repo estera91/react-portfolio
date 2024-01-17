@@ -1,0 +1,48 @@
+/* styles.css */
+
+/* Base styles for all screens */
+.full-screen-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .v-stack-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* Media Queries for responsiveness */
+  
+  /* For big screens */
+  @media only screen and (min-width: 1200px) {
+    .full-screen-section {
+      flex-direction: row;
+    }
+  
+    .v-stack-container {
+      width: 50%;
+    }
+  }
+  
+  /* For tablet screens */
+  @media only screen and (max-width: 1199px) and (min-width: 768px) {
+    .v-stack-container {
+      width: 70%;
+    }
+  }
+  
+  /* For phone screens */
+  @media only screen and (max-width: 767px) {
+    .v-stack-container {
+      width: 90%;
+    }
+  }
+  

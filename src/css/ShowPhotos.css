@@ -1,0 +1,37 @@
+/* styles.css */
+.modalGallery{
+    background-color:black;
+}
+/* Apply styles for large screens */
+@media screen and (min-width: 950px) {
+    .gallery-item {
+      max-width:900px;
+      margin-top: 20px;
+      background-color:black;
+    }
+    .modalGallery{
+        max-width:950px !important;
+        background-color:black;
+    }
+  }
+  
+  /* Apply styles for tablet screens */
+  @media screen and (min-width: 501px) and (max-width: 900px) {
+    .gallery-item {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+  
+  /* Apply styles for phone screens */
+  @media screen and (max-width: 500px) {
+    .gallery-item {
+      width: 450px;
+      max-width:450px;
+    
+      margin-top: 10px;
+    }
+  }
+  
+  /* Add any other custom styles here */
+  

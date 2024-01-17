@@ -1,0 +1,272 @@
+/* styles.css */
+
+/* Base styles for all screens */
+.animated-sections-container {
+  display: flex;
+  overflow: hidden;
+  color: black;
+  width: 100%;
+  height: 380px;
+  background-size: cover;
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+.Experience li{
+  font-size:20px
+}
+.textDescBox p{
+  text-align: justify;
+text-justify: inter-word;
+}
+.sekcjajeden {
+  background-image: url('/public/img/orange.jpg');
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.left-section,
+.right-section {
+  width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.left-section {
+  background-color: #ffe6df;
+  margin-left: 5%;
+  animation: slideInLeft 1s ease-in-out;
+}
+
+.right-section {
+ 
+  margin-right: 5%;
+  animation: slideInRight 1s ease-in-out;
+  height:300px;
+}
+.textDescBox{
+  min-height:170px;
+  height:200px;
+}
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Common styles for all screen sizes */
+h1 {
+  font-family: Helvetica, sans-serif;
+  opacity: 0.8;
+}
+
+/* Big screens (wider than 1024px) */
+@media only screen and (min-width: 1300px) {
+  h1 {
+    text-align: right;
+    padding-top: 70px;
+    margin-left: 3%;
+    max-width:900px;
+    font-size: 100px;
+    margin-bottom:300px
+  }
+
+  p {
+    font-size: 15px;
+  }
+  .CertText p{
+    font-size:20px !important;
+    padding-bottom: 30px;
+    text-align: left;
+    padding-left:20px;
+  }
+  .CertsHeading{
+    font-size:70px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .CertsContent{
+    padding-top:200px !important;
+  }
+
+  .animated-sections-container{
+
+    padding-top:20px;
+    margin-top:20px;
+    padding-bottom:20px;
+
+  }
+}
+
+/* Medium screens (between 768px and 1023px) */
+@media only screen and (min-width: 768px) and (max-width: 1700px) {
+  h1 {
+    text-align: center;
+    padding-top: 50px;
+    margin-left: 0px !important;
+    margin-right:0px !important;
+    width: 100%;
+    font-size: 3rem; /* Adjust font size as needed */
+    margin-bottom:170px !important;
+  }
+
+  p {
+    font-size: 40px;
+  }
+  .animated-sections-container div{
+    margin-left:0px !important;
+    width:100%;
+    margin-bottom:50px !important;
+    padding-top:10px;
+  }
+  .textDescBox{
+    height:250px;
+  }
+
+  .animated-sections-container img{
+    margin-left:0px !important;
+    margin-bottom:50px !important;
+    margin-top:100px;
+    
+  }
+}
+
+/* Small screens (up to 767px) */
+@media only screen and (max-width: 900px) {
+  h1 {
+    text-align: center;
+    padding-top: 50px;
+    margin-left: 0px !important;
+    width: 100%;
+    font-size: 2rem; /* Adjust font size as needed */
+    margin-bottom:80px
+  }
+
+  p {
+    font-size: 13px;
+  }
+  .animated-sections-container div{
+    margin-left:0px !important;
+    width:100%;
+    margin-bottom:50px !important;
+
+  }
+  .animated-sections-container img{
+    margin-left:0px !important;
+    margin-bottom:50px !important;
+    
+  }
+}
+/* Small screens (up to 767px) */
+@media only screen and (max-width: 500px) {
+  h1 {
+    text-align: center;
+    width:100%;
+    padding-top: 20px;
+    margin-left: 0px !important;
+    width: 100%;
+    font-size: 50px !important; /* Adjust font size as needed */
+    margin-bottom: 80px !important;
+    opacity:1 !important
+  }
+ 
+  .textDescBox{
+    min-height:350px;
+    margin-bottom:40px;
+    opacity:1 !important;
+  }
+  .textDescBox p{
+    font-size:20px
+  }
+  p {
+    font-size: 20px;
+  
+  }
+  .CertText p{
+    font-size:18px !important;
+    padding-bottom: 30px;
+    text-align: left;
+    padding-left:20px;
+  }
+  .CertsHeading{
+    font-size:70px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .CertsContent{
+    padding-top:200px !important;
+  }
+  .animated-sections-container div{
+    padding-top:20px;
+    margin-left:0px !important;
+    width:100%;
+    margin-bottom:140px !important;
+
+  }
+  .animated-sections-container img{
+    margin-left:0px !important;
+    margin-bottom:50px !important;
+    
+  }
+}
+
+
+
+/* Media Queries for responsiveness */
+@media only screen and (max-width: 1200px) {
+  .animated-sections-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left-section,
+  .right-section {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .textDescBox{
+    min-height:250px;
+    margin-bottom:40px;
+  }
+  .textDescBox p{
+    font-size:25px
+  }
+  p {
+    font-size: 25px;
+  
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .left-section,
+  .right-section {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .textDescBox{
+    min-height:250px;
+    margin-bottom:40px;
+  }
+  .textDescBox p{
+    font-size:25px
+  }
+  p {
+    font-size: 25px;
+  
+  }
+}
