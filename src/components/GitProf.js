@@ -8,6 +8,8 @@ const TwoSectionsWithAnimation = () => {
   const handleScroll = () => {
     setRotation(0); // Reset to initial state
     setRotation(360); // Apply rotate animation
+    window.open('https://github.com/estera91/react-portfolio', '_blank');
+
   };
 
   // Effect to reset rotation when component mounts

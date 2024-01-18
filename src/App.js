@@ -9,6 +9,7 @@ import Footer from './components/Footer.js'
 import ScrollButton from './components/Scroll.js'
 import ApiCalc from './components/ApiCalc.js'
 import GitProf from './components/GitProf.js'
+import Ai from './components/aisection.js'
 import './App.css';
 
 const theme = extendTheme({
@@ -29,6 +30,7 @@ function App() {
         <Header zIndex="1000" bgColor="black" />
         <Box p={[4, 6, 8]}>{/* Adjust padding for responsiveness */}</Box>
         <LandingSection />
+        <Ai />
         <ProjectsSection />
         <ExperienceSection />
         <ApiCalc />
