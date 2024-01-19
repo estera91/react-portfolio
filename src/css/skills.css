@@ -5,15 +5,16 @@
   
   .big-header {
     font-size: 4em;
-    margin-bottom: 20px;
     color:white;
-    text-align:center
+    text-align:center;
+    margin-top:50px !important;
+    margin-bottom:40px !important;
   }
 .skillsDesc{
     font-size:20px;
     margin-left:50px;
     margin-right:50px;
-    margin-top:80px
+    margin-top:10px
 }
 .skillsDescR{
     font-size:24px;

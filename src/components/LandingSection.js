@@ -11,7 +11,7 @@ import Skills from './skills.js';
 
 const pictureRights = 'Image by <a href="https://www.freepik.com/free-photo/te-headphones-near-laptop_1986426.htm#page=2&query=background%20computer%20work%20pastels%20color&position=49&from_view=search&track=ais&uuid=7d1dc1ff-51a5-455a-8827-d50930e204f0">Freepik</a>'
 
-const wordsArray = ['PHP', 'HTML5', 'CSS3','Bash','MySQL','REACT','REST API','YII','Yii2','Symfony5','JavaScript','JQuery','CURL','XML','Linux','Windows','MAC','Apache2','Agile','PhPMyAdmmin','Gimp','WorkBench','VisualStudio','Vim','Networking','DNS']; // Replace with your array of words
+const wordsArray = ['PHP', 'Chat GPT', 'Microsoft Designer' , 'HTML5', 'CSS3','Bash','MySQL','REACT','REST API','YII','Yii2','Symfony5','JavaScript','JQuery','CURL','XML','Linux','Windows','MAC','Apache2','Agile','PhPMyAdmmin','Gimp','WorkBench','VisualStudio','Vim','Networking','DNS']; // Replace with your array of words
 const backgroundImage = process.env.PUBLIC_URL +'background.jpg';
 
 
