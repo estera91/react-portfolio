@@ -1,3 +1,5 @@
+This project is my personal portfolio build in REACT CODE. 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
