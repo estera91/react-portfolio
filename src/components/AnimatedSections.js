@@ -37,7 +37,7 @@ const AnimatedSections = () => {
       speed: "50"
     }, 
   ];
-  const imgSrc = process.env.PUBLIC_URL + '/img/jay2.jpg';
+  const imgSrc = process.env.PUBLIC_URL + '/img/estera.jpg';
   // Render the animated sections
   return (
     <div style={pageStyles} className="sekcjajeden" >

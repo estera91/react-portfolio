@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import {
-  VStack,
   Heading,
   Text,
   Accordion,
@@ -9,7 +8,6 @@ import {
   AccordionPanel,
   Icon,
   Box,
-  Grid,
   Center,
   useBreakpointValue,
 } from '@chakra-ui/react';
@@ -380,39 +378,6 @@ interface libraries in C ++</li>
               </Text>
             </AccordionPanel>
           </AccordionItem>
-
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-         
-          {/* Add more AccordionItems for additional job titles */}
         </Accordion>
       </Center>
     </FullScreenSection>

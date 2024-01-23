@@ -1,30 +1,26 @@
 // ScrollButtons.js
 
 import React from 'react';
-import { Button, VStack, CSSReset, ChakraProvider, extendTheme } from '@chakra-ui/react';
+import { Button, VStack } from '@chakra-ui/react';
 import { FaArrowUp, FaArrowDown } from 'react-icons/fa';
 
-const theme = extendTheme({
-  styles: {
-    global: {
-      'html, body': {
-        scrollBehavior: 'smooth',
-      },
-    },
-  },
-});
 
+
+// ScrollButtons functional component
 const ScrollButtons = () => {
+  // Function to scroll up by the screen height when the button is clicked
   const scrollUpByScreenHeight = () => {
     const screenHeight = window.innerHeight;
     window.scrollBy({ top: -screenHeight, behavior: 'smooth' });
   };
 
+  // Function to scroll down by the screen height when the button is clicked
   const scrollDownByScreenHeight = () => {
     const screenHeight = window.innerHeight;
     window.scrollBy({ top: screenHeight, behavior: 'smooth' });
   };
 
+  // JSX structure for rendering scroll-up and scroll-down buttons
   return (
     <VStack
       position="fixed"
@@ -34,6 +30,7 @@ const ScrollButtons = () => {
       align="flex-end"
       zIndex="999"
     >
+      {/* Scroll-up button */}
       <Button
         onClick={scrollUpByScreenHeight}
         bgColor="black"
@@ -48,6 +45,7 @@ const ScrollButtons = () => {
       >
         <FaArrowUp />
       </Button>
+      {/* Scroll-down button */}
       <Button
         onClick={scrollDownByScreenHeight}
         bgColor="black"
@@ -69,4 +67,5 @@ const ScrollButtons = () => {
   );
 };
 
+// Export the ScrollButtons component as the default export
 export default ScrollButtons;

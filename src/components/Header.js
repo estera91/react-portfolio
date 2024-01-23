@@ -1,14 +1,11 @@
+// Import necessary dependencies from React and external libraries
 import React, { useEffect, useRef } from "react"; 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; 
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons"; 
-import { 
- faGithub, 
- faLinkedin, 
- faMedium, 
- faStackOverflow, 
+import {  faGithub, faLinkedin,  
 } from "@fortawesome/free-brands-svg-icons"; 
 import { Box, HStack } from "@chakra-ui/react"; 
- 
+
+// Array of social media links with corresponding icons
 const socials = [ 
  /*{ 
    icon: faEnvelope, 
@@ -22,19 +19,18 @@ const socials = [
    icon: faLinkedin, 
    url: "https://www.linkedin.com/in/estera-bulkiewicz-83789a122/?originalSubdomain=pl", 
  }, 
- 
-
+ /* Add more social media links as needed */
 ]; 
 
 /** 
-* This component illustrates the use of both the useRef hook and useEffect hook. 
-* The useRef hook is used to create a reference to a DOM element, in order to tweak the header styles and run a transition animation. 
-* The useEffect hook is used to perform a subscription when the component is mounted and to unsubscribe when the component is unmounted. 
-* Additionally, it showcases a neat implementation to smoothly navigate to different sections of the page when clicking on the header elements. 
-*/ 
+* Header component demonstrating the use of useRef and useEffect hooks.
+* The useRef hook is used to create a reference to a DOM element (header) to manipulate its styles and run a transition animation.
+* The useEffect hook is used to set up and clean up a scroll event listener for animation and smooth section navigation.
+*/
 const Header = () => { 
  const headerRef = useRef(null); 
  
+ // useEffect to handle scroll events for header animation
  useEffect(() => { 
    let prevScrollPos = window.scrollY; 
  
@@ -51,13 +47,16 @@ const Header = () => {
      } 
      prevScrollPos = currentScrollPos; 
    } 
+   // Add scroll event listener
    window.addEventListener('scroll', handleScroll) 
- 
+
+   // Clean up by removing the scroll event listener
    return () => { 
      window.removeEventListener('scroll', handleScroll) 
    } 
  }, []); 
- 
+
+ // Function to handle smooth navigation to different sections on link click
  const handleClick = (anchor) => () => { 
    const id = `${anchor}-section`; 
    const element = document.getElementById(id); 
@@ -67,45 +66,10 @@ const Header = () => {
        block: "start", 
      }); 
    } 
- }; 
-/*
- useEffect(() => {
-  const handleScroll = () => {
-    // Business logic
-  };
-
-  window.addEventListener('scroll', handleScroll);
-
-  return () => {
-    window.removeEventListener('scroll', handleScroll);
-  }
-}, []);
-*/
-useEffect(() => {
-  let prevScrollPos = window.scrollY;
-
-  const handleScroll = () => {
-    const currentScrollPos = window.scrollY;
-    const headerElement = headerRef.current;
-    if (!headerElement) {
-      return;
-    }
-    if (prevScrollPos > currentScrollPos) {
-      headerElement.style.transform = "translateY(0)";
-    } else {
-      headerElement.style.transform = "translateY(-200px)";
-    }
-    prevScrollPos = currentScrollPos;
-  }
-
-  window.addEventListener('scroll', handleScroll)
-
-  return () => {
-    window.removeEventListener('scroll', handleScroll)
-  }
-}, []);
+ };
 
  return ( 
+   // Fixed position Box element for the header
    <Box 
    position="fixed"
    bgColor="black"
@@ -120,13 +84,16 @@ useEffect(() => {
    ref={headerRef}
    zIndex="1000"
    > 
+     {/* Header content within a Box with styling */}
      <Box color="white" maxWidth="1280px" margin="0 auto" bgColor="black"> 
+       {/* HStack for horizontal alignment and spacing of elements */}
        <HStack 
          px={16} 
          py={4} 
          justifyContent="space-between" 
          alignItems="center" 
        > 
+         {/* Social media links */}
          <nav> 
            <HStack spacing={8}> 
              {socials.map(({ icon, url }) => ( 
@@ -141,9 +108,11 @@ useEffect(() => {
              ))} 
            </HStack> 
          </nav> 
+
+         {/* Navigation links for different sections */}
          <nav> 
            <HStack spacing={8} class="headerMenu"> 
-            <a href="#skills" onClick={handleClick("contactme")}> 
+             <a href="#skills" onClick={handleClick("contactme")}> 
                Skills 
              </a>
              <a href="#certs" onClick={handleClick("contactme")}> 

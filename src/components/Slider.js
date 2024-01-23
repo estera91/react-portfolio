@@ -1,20 +1,42 @@
+// Slider.js
+
 import React, { useState, useEffect } from 'react';
 
+/**
+ * Component for an Auto-Changing Photo Slider.
+ */
 const Slider = () => {
+  // State to manage the current slider value
   const [sliderValue, setSliderValue] = useState(1);
 
+  /**
+   * Event handler for slider value change.
+   * @param {Object} event - The event object.
+   */
   const handleSliderChange = (event) => {
     setSliderValue(Number(event.target.value));
   };
 
+  /**
+   * Event handler for next button click.
+   * Increments the slider value cyclically.
+   */
   const handleNextClick = () => {
     setSliderValue((prevValue) => (prevValue % 3) + 1);
   };
 
+  /**
+   * Event handler for previous button click.
+   * Decrements the slider value cyclically.
+   */
   const handlePrevClick = () => {
     setSliderValue((prevValue) => (prevValue - 2 + 3) % 3 + 1);
   };
 
+  /**
+   * Get the URL of the current photo based on the slider value.
+   * @returns {string} - The URL of the current photo.
+   */
   const getImageUrl = () => {
     // Replace these URLs with the URLs of your photos
     const photoUrls = [
@@ -28,14 +50,29 @@ const Slider = () => {
     return photoUrls[index];
   };
 
+  /**
+   * Effect hook to auto-increment the slider value every 3 seconds.
+   * Cleanup the interval on component unmount.
+   */
   useEffect(() => {
     const intervalId = setInterval(() => {
-      // Increment the slider value every 3 seconds
       setSliderValue((prevValue) => (prevValue % 3) + 1);
     }, 3000);
 
     return () => clearInterval(intervalId); // Cleanup the interval on component unmount
   }, []); // Empty dependency array ensures the effect runs only once on mount
+
+  // Inline style for arrow buttons
+  const arrowStyle = {
+    position: 'absolute',
+    top: '50%',
+    transform: 'translateY(-50%)',
+    fontSize: '24px',
+    background: 'none',
+    border: 'none',
+    cursor: 'pointer',
+    color: 'white',
+  };
 
   return (
     <div style={{ width: '700px', height: '400px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
@@ -68,17 +105,6 @@ const Slider = () => {
       </div>
     </div>
   );
-};
-
-const arrowStyle = {
-  position: 'absolute',
-  top: '50%',
-  transform: 'translateY(-50%)',
-  fontSize: '24px',
-  background: 'none',
-  border: 'none',
-  cursor: 'pointer',
-  color: 'white',
 };
 
 export default Slider;
