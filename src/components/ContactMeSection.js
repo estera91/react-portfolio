@@ -39,10 +39,20 @@ const ContactForm = () => {
 
   // Function to handle form submission
   const onSubmit = async (data) => {
-    // Perform the email sending logic here
+    const { name, email, subject, message } = data;
+
     try {
-      // Simulate sending email (replace this with your actual logic)
-      console.log('Sending email:', data);
+      const response = await axios.post('/sendEmail', {
+        // Data from the form
+        to: 'estera.bulkiewicz@gmail.com',
+        subject: subject,
+        body: `
+          Name: ${name}\n
+          Email: ${email}\n
+          Message: ${message}
+        `,
+      });
+      console.log('Email sent:', response.data);
       alert('Email sent successfully!');
     } catch (error) {
       console.error('Error sending email:', error);
