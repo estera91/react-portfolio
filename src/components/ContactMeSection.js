@@ -91,18 +91,16 @@ const ContactForm = () => {
               <FormErrorMessage>{formState.errors.message?.message}</FormErrorMessage>
             </FormControl>
 
-            {/* Uncomment below if you want to include reCAPTCHA */}
-            {/* 
             <FormControl mt={4} isInvalid={formState.errors.recaptcha}>
               <ReCAPTCHA
-                sitekey="YOUR_RECAPTCHA_SITE_KEY" // Replace with your reCAPTCHA site key
+                sitekey="6LedzHMpAAAAAPjuOHmuQbmdoNoroZNAogDsUfWb" // Replace with your reCAPTCHA site key
                 onChange={(value) => {
                   setError('recaptcha', null);
                 }}
               />
               <FormErrorMessage>{formState.errors.recaptcha?.message}</FormErrorMessage>
             </FormControl>
-            */}
+            
 
             {/* Submit Button */}
             <Button
