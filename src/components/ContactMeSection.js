@@ -103,7 +103,7 @@ const ContactForm = () => {
 
             <FormControl mt={4} isInvalid={formState.errors.recaptcha}>
               <ReCAPTCHA
-                sitekey="6LedzHMpAAAAAPjuOHmuQbmdoNoroZNAogDsUfWb" // Replace with your reCAPTCHA site key
+                sitekey="6LfVvn0pAAAAAHaPmv7Mc0bd8UVmCAAsA8T6cxhN" // Replace with your reCAPTCHA site key
                 onChange={(value) => {
                   setError('recaptcha', null);
                 }}
