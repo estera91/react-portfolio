@@ -8,10 +8,9 @@
     "@fortawesome/free-brands-svg-icons": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
-    "@hookform/resolvers": "^3.3.4",
-    "@mui/material": "^5.15.6",
     "@svgr/webpack": "^8.1.0",
-    "@typescript-eslint/parser": "^5.62.0",
+    "@hookform/resolvers": "^3.3.2",
+    "@mui/material": "^5.14.20",
     "acorn-walk": "^8.3.2",
     "axios": "^1.6.7",
     "emotion-theming": "^11.0.0",
@@ -36,12 +35,7 @@
     "coverage": "jest --coverage",
     "test": "jest"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
+
   "browserslist": {
     "production": [
       ">0.2%",
@@ -74,4 +68,6 @@
   "main": "jest.config.js",
   "author": "Estera Bulkiewicz",
   "license": "ISC"
+
+  
 }
