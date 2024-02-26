@@ -14,7 +14,6 @@ import {
   FormErrorMessage,
   Container
 } from '@chakra-ui/react';
-import ReCAPTCHA from 'react-google-recaptcha';
 import AnimatedImage from './AnimatedImage';
 
 // Attribution for the image source
@@ -101,15 +100,6 @@ const ContactForm = () => {
               <FormErrorMessage>{formState.errors.message?.message}</FormErrorMessage>
             </FormControl>
 
-            <FormControl mt={4} isInvalid={formState.errors.recaptcha}>
-              <ReCAPTCHA
-                sitekey="6LfVvn0pAAAAAHaPmv7Mc0bd8UVmCAAsA8T6cxhN" // Replace with your reCAPTCHA site key
-                onChange={(value) => {
-                  setError('recaptcha', null);
-                }}
-              />
-              <FormErrorMessage>{formState.errors.recaptcha?.message}</FormErrorMessage>
-            </FormControl>
             
 
             {/* Submit Button */}
