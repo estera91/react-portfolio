@@ -46,9 +46,9 @@ const TypingAnimation = ({ text, speed }) => {
   // }, [displayedText]);
 
   return (
-    <div className="typing-animation-box" ref={animationBoxRef}>
+    <div key="typAnim" className="typing-animation-box" ref={animationBoxRef}>
       {/* Use Chakra UI Text component for styling */}
-      <Text width="100%" fontSize="20px">
+      <Text key="zawartosc" width="100%" fontSize="20px">
         {displayedText}
       </Text>
     </div>

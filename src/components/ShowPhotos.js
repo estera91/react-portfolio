@@ -103,10 +103,10 @@ const ImageGallery = ({ imageUrls }) => {
       )}
 
       {/* Modal */}
-      <Modal isOpen={isOpen} onClose={closeModal} className="modalGallery" bg="black">
+      <Modal isOpen={isOpen} onClose={closeModal} class="modalGallery" bg="black">
         <ModalOverlay />
         {/* Modal content */}
-        <ModalContent className='gallery-item'>
+        <ModalContent class='gallery-item'>
           <ModalHeader textAlign="center">Image Preview</ModalHeader>
           <ModalCloseButton top="-25px" color="white" paddingTop="40px" />
           <ModalBody onClick={handleContentClick}>
@@ -115,7 +115,7 @@ const ImageGallery = ({ imageUrls }) => {
               <Image
                 src={selectedImage}
                 alt="Image Preview"
-                maxH="70vh"
+                maxH="90vh"
                 objectFit="contain"
                 borderRadius="md"
               />

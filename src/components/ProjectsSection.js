@@ -58,7 +58,7 @@ const ProjectsSection = () => {
           paddingTop={isLargeScreen ? "50px" : "20px"}
           paddingBottom="40px"
           marginTop="40px"
-          marginBottom="90px"
+          marginbottom="90px"
           color="white"
           fontSize="80px"
           fontFamily="Helvetica"

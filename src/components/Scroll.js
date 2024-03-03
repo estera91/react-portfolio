@@ -58,7 +58,7 @@ const ScrollButtons = () => {
         width="auto"
         paddingTop="4px"
         paddingBottom="4px"
-        marginBottom="20px"
+        marginbottom="20px"
         border="solid 2px white"
       >
         <FaArrowDown />

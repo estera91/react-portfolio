@@ -15,7 +15,7 @@ const MyComponent = () => {
   ];
   
   return (
-    <Box id="certs" bgColor="black" color="white" p={8}  className="CertsContent">
+    <Box id="certs" bgColor="black" color="white" p={8}  class="CertsContent">
       <Grid templateColumns="1fr 1fr" gap={8}>
         {/* Section 1: Photo Gallery with Certificates */}
         <Box>
@@ -31,19 +31,19 @@ const MyComponent = () => {
           
           paddingTop="0px"
         >
-          <Heading fontFamily="Arial" className="CertsHeading">
+          <Heading fontFamily="Arial" className="CertsHeading" marginTop="50px">
             Let's learn!
           </Heading>
           <Text
          // bgColor="#df7d00"
           bgColor="black"
           color="white"
-          paddingTop="30px"
-           fontSize="20px"
+          paddingTop="40px"
+          fontSize="20px"
           borderRadius="9px"
-          className="CertText"
+          class="CertText"
           >
-            <p fontSize="20px">Welcome to my journey of perpetual growth and exploration as a IT specialist and web developer.
+            <p  >Welcome to my journey of perpetual growth and exploration as a IT specialist and web developer.
             </p>
             <p>
              I have an insatiable thirst for learning, a passion that drives me to continually expand my knowledge and refine my skills. In this dynamic digital landscape, each certificate and course completed represents a stepping stone in my ongoing pursuit of excellence.

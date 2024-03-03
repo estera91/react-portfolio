@@ -15,7 +15,7 @@ h1 {
   
 }
 .Experience li{
-  font-size:20px
+  fontSize:20px
 }
 .textDescBox p{
   text-align: justify;
@@ -76,27 +76,27 @@ h1 {
 }
 
 /* Big screens (wider than 1024px) */
-@media only screen and (min-width: 1300px) {
+@media only screen and (minWidth: 1300px) {
   h1 {
     text-align: right;
     padding-top: 70px;
     margin-left: 3%;
     max-width:900px;
-    font-size: 100px;
+    fontSize: 100px;
     margin-bottom:300px
   }
 
   p {
-    font-size: 15px;
+    fontSize: 15px;
   }
   .CertText p{
-    font-size:20px !important;
+    fontSize:20px !important;
     padding-bottom: 30px;
     text-align: left;
     padding-left:20px;
   }
   .CertsHeading{
-    font-size:70px;
+    fontSize:70px;
     font-family: Arial, Helvetica, sans-serif;
   }
   .CertsContent{
@@ -113,7 +113,7 @@ h1 {
 }
 
 /* Medium screens (between 768px and 1023px) */
-@media only screen and (min-width: 768px) and (max-width: 1700px) {
+@media only screen and (minWidth: 768px) and (max-width: 1700px) {
    h1 {
     text-align: center;
     padding-top: 50px;
@@ -126,6 +126,15 @@ h1 {
 
   p {
     font-size: 40px;
+  }
+  h1 p{
+    font-size: 20px !important;
+    text-align: center;
+    padding-top: 50px;
+    margin-left: 0px !important;
+    margin-right:0px !important;
+    width: 100%;
+    margin-bottom:170px !important;
   }
   .animated-sections-container div{
     margin-left:0px !important;
@@ -144,7 +153,9 @@ h1 {
     
   }
 }
-
+.webDev{
+  font-size:20px;
+}
 /* Small screens (up to 767px) */
 @media only screen and (max-width: 900px) {
   h1 {

@@ -7,17 +7,21 @@
     max-width: 100%;
   }
   
-  @media screen and (min-width: 600px) {
+  @media screen and (minWidth: 600px) {
     .VStack > div {
       padding-left: 8px;
      padding-right: 8px;
     }
   }
   
-  @media screen and (min-width: 960px) {
+  @media screen and (minWidth: 960px) {
     .VStack > div {
       padding-left: 16px;
       padding-right: 16px;
     }
   }
-  
+  .Experience ul li{
+    text-align:"left";
+    align:"left";
+
+  }

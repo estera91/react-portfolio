@@ -62,10 +62,10 @@ const CurrencyCalculator = () => {
   return (
     <Center bgColor="black" paddingTop="60px">
       <Box bg="black" p={4} borderRadius="md" align="center" minWidth="400px">
-        <Heading marginBottom="50px" color="white">Convert currency through API</Heading>
+        <Heading marginbottom="50px" color="white">Convert currency through API</Heading>
         <FormControl>
           <FormLabel color="white">From:</FormLabel>
-          <Select value={fromCurrency} onChange={(e) => setFromCurrency(e.target.value)} borderRadius="7px" marginBottom="10px" height="40px" color="white">
+          <Select value={fromCurrency} onChange={(e) => setFromCurrency(e.target.value)} borderRadius="7px" marginbottom="10px" height="40px" color="white">
             {currencies.map(currency => (
               <option key={currency} value={currency}>{currency}</option>
             ))}
@@ -79,21 +79,21 @@ const CurrencyCalculator = () => {
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
             onBlur={() => validateAmount(amount)}
-            borderRadius="7px" marginBottom="10px" height="40px" color="white"
+            borderRadius="7px" marginbottom="10px" height="40px" color="white"
           />
           <FormErrorMessage>{amountError}</FormErrorMessage>
         </FormControl>
 
         <FormControl>
           <FormLabel color="white">To:</FormLabel>
-          <Select value={toCurrency} onChange={(e) => setToCurrency(e.target.value)} borderRadius="7px" marginBottom="10px" height="40px" color="white">
+          <Select value={toCurrency} onChange={(e) => setToCurrency(e.target.value)} borderRadius="7px" marginbottom="10px" height="40px" color="white">
             {currencies.map(currency => (
               <option key={currency} value={currency}>{currency}</option>
             ))}
           </Select>
         </FormControl>
 
-        <Button colorScheme="teal" mt={4} onClick={convertCurrency} bgColor="orange" paddingTop="20px" paddingBottom="20px" paddingLeft="10px" paddingRight="10px" borderRadius="10px" color="black" fontSize="25px" marginTop="30px" marginBottom="20px">Convert</Button>
+        <Button colorScheme="teal" mt={4} onClick={convertCurrency} bgColor="orange" paddingTop="20px" paddingBottom="20px" paddingLeft="10px" paddingRight="10px" borderRadius="10px" color="black" fontSize="25px" marginTop="30px" marginbottom="20px">Convert</Button>
 
         {apiError && (
           <Text fontSize="18px" color="red" mt={3}>{apiError}</Text>

@@ -12,7 +12,7 @@ const Footer = () => {
           color="white"
           justifyContent="center"
           alignItems="center"
-          maxWidth="1024px"
+          maxwidth="1024px"
           height={16}
           paddingTop="70px"
           paddingBottom="40px"

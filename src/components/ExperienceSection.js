@@ -13,6 +13,7 @@ import {
 } from '@chakra-ui/react';
 import { FaAngleDown, FaAngleUp } from 'react-icons/fa';
 import FullScreenSection from './FullScreenSection';
+import '../css/FullScreenSection.css'
 
 const ExperienceSection = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -35,7 +36,7 @@ const ExperienceSection = () => {
         paddingTop="50px"
         paddingBottom="40px"
         marginTop="40px"
-        marginBottom="50px"
+        marginbottom="50px"
         paddingLeft="30px"
         paddingRight="30px"
         fontSize="80px"
@@ -45,20 +46,20 @@ const ExperienceSection = () => {
         Experience
       </Heading>
 
-      <Center width="100%" className="Experience">
+      <Center width="100%" class="Experience" text-align="left" align="left">
         <Accordion bg="#" allowToggle color="black" align="center" width="100%" paddingLeft="10%" paddingRight="10%">
           <AccordionItem
             bg="#df7d00"
             borderRadius="9px"
             width="100%" // Set to 100% for devices with screen lower than 820px
             maxW="100%" // Set maximum width to 100% for all screens
-            marginBottom="50px"
+            marginbottom="50px"
             border="0px"
           >
             <AccordionButton
               width="100%" // Set to 100% for devices with screen lower than 820px
               maxW="100%" // Set maximum width to 100% for all screens
-              marginBottom="50px"
+              marginbottom="50px"
             >
               <Box flex="2" width="100%" textAlign="left"h="120px"  w="100%">
                 <Center>
@@ -72,28 +73,34 @@ const ExperienceSection = () => {
             <AccordionPanel bg="#fffde6">
               {/* Content of the sublist for Job Title 1 */}
               <Text textAlign="left" paddingLeft="30px">
-                <p>
+                
                   Responsibilities : 
-                  <ul>
+                  
+                  <ul  text-align="left" align="left" >
                     <li>
-                    Creating  websites based on Wordpress, Wix, Bitrix
+                    Designed, developed, and updated websites using PHP, HTML, CSS, and JavaScript, following web 
+development standards and best practices.
                     </li>
-                    <li>Implementing security for websites with technology Cloudflare</li>
-                    <li>Managing server Apache2, PHPMyAdmin</li>
-                    <li>Writing code in projects with : HTML5, CSS, JavaScript, PHP, JQuery, REST, REACT 
-                                  API, MySQL, Bash, XML</li>
-                    <li>Writing code for Unit tests</li>
-                    <li>Knowledge about frameworks: YII, Symfony</li>
-                    <li>Setting up  security on customers computers (Windows, MAC, Linux)</li>
-                    <li>Resolving computers problems (Windows, Linux, MAC)</li>
-                    <li>Creating local networks, setting up routers, VPN</li>
-                    <li>Managing CPanel</li>
-                    <li>Working with clients
+                    <li>Built and managed Content Management Systems (CMS) using WordPress, Wix, and Bitrix, customizing 
+themes and plugins to meet client needs</li>
+                    <li>Integrated MySQL databases and performed queries and operations, ensuring data integrity and security.</li>
+                    <li>Tested and optimized web performance and security, using tools such as Google PageSpeed Insights, 
+GTmetrix, and SSL Labs.</li>
+                    <li> Documented and maintained web development projects, using tools such as Git, GitHub, and Markdown</li>
+                    <li> Implemented web payment services, using APIs such as Stripe, PayPal, and Braintree</li>
+                    <li> Coded in PHP, React, jQuery, JavaScript, HTML5, CSS, and Bash, using frameworks such as Yii2 and 
+Symfony</li>
+                    <li> Performed unit tests for REST API in PHP, using Symfony and PHPUnit.</li>
+                    <li> Used AI tools such as Chat GPT and Microsoft designer, to enhance user interaction and web design</li>
+                    <li> Implemented security for websites, using techniques such as encryption, authentication, and 
+authorization.</li>
+                    <li> Configured and managed Cloudflare, Apache2, and cPanel, to improve web hosting and domain 
+management.
                     </li>
                   </ul>
-                </p>
+                  </Text>
 
-              </Text>
+              
             </AccordionPanel>
           </AccordionItem>
 
@@ -102,13 +109,13 @@ const ExperienceSection = () => {
             borderRadius="9px"
             width="100%" // Set to 100% for devices with screen lower than 820px
             maxW="100%" // Set maximum width to 100% for all screens
-            marginBottom="50px"
+            marginbottom="50px"
             border="0px"
           >
             <AccordionButton
               width="100%" // Set to 100% for devices with screen lower than 820px
               maxW="100%" // Set maximum width to 100% for all screens
-              marginBottom="50px"
+              marginbottom="50px"
             >
               <Box flex="2" width="100%" textAlign="left" h="120px"  w="100%">
                 <Center>
@@ -122,34 +129,32 @@ const ExperienceSection = () => {
             <AccordionPanel bg="#fffde6">
               {/* Content of the sublist for Job Title 1 */}
               <Text textAlign="left" paddingLeft="30px">
-                <p>
+                
                   Responsibilities : 
+                  
                   <ul>
                     <li>
-                     Creating web applications with 
-using framework Yii,Yii2 using PHP(OOP,MVC), JavaScript, JQuery, HTML5, 
-CSS , Angular
-                    </li>
-                    <li>Writing projects in  Symfony2, Yii2</li>
-                    <li>Writing and managing 
-Application Programming Interface (API, REST API)</li>
-                    <li>Writing code in projects with : HTML5, CSS, JavaScript, PHP, JQuery, REST, REACT 
-                                  API, MySQL, Bash, XML</li>
-                    <li>Creation and 
-maintenance XML, JSON data and integrations</li>
-                    <li>Ceating documentations </li>
-                    <li>Creating relational databases in MySql</li>
-                    <li>Management and configuration 
-of APACHE, PHP My Admin</li>
-                    <li>Working with 
-GIT, VIM , Workbench</li>
-                    <li>Working and providing with e-commerce projects</li>
-                    <li>Programming with Agile metodology
-                    </li>
-                  </ul>
-                </p>
+                    Developed and maintained web applications using various frameworks such as Yii, Yii2, React, WordPress, 
+Angular, and Symfony2
 
-              </Text>
+                    </li>
+                    <li> Utilized PHP (OOP, MVC), JavaScript, jQuery, HTML5, and CSS to create dynamic and responsive web 
+pages</li>
+                    <li> Wrote and managed Application Programming Interface (API) using RESTful principles and best practices
+</li>
+                    <li> Created and maintained XML and JSON data for data exchange and storage</li>
+                    <li> Created documentation for web applications using tools such as Sphinx and Markdown</li>
+                    <li> Designed and implemented relational databases in MySQL, following the principles of database 
+normalization and optimization </li>
+                    <li>Managed and configured APACHE web server using Linux Ubuntu, performing tasks such as installation, 
+security, and backup</li>
+                    <li> Used GIT, NetBeans, and Workbench as the preferred tools for version control, development, and 
+database management</li>
+                    <li> Worked with e-commerce projects, integrating payment gateways, shopping carts, and inventory systems</li>
+                    <li> Programmed with Agile methodology, participating in daily stand-ups, sprints, and retrospectives</li>
+                  </ul>
+                
+                  </Text>
             </AccordionPanel>
           </AccordionItem>
 
@@ -158,13 +163,13 @@ GIT, VIM , Workbench</li>
             borderRadius="9px"
             width="100%" // Set to 100% for devices with screen lower than 820px
             maxW="100%" // Set maximum width to 100% for all screens
-            marginBottom="50px"
+            marginbottom="50px"
             border="0px"
           >
             <AccordionButton
               width="100%" // Set to 100% for devices with screen lower than 820px
               maxW="100%" // Set maximum width to 100% for all screens
-              marginBottom="50px"
+              marginbottom="50px"
             >
               <Box flex="2" width="100%" textAlign="left" h="120px" w="100%">
                 <Center>
@@ -179,31 +184,27 @@ GIT, VIM , Workbench</li>
             <AccordionPanel bg="#fffde6">
               {/* Content of the sublist for Job Title 1 */}
               <Text textAlign="left" paddingLeft="30px">
-                <p>
                   Responsibilities : 
+                  
                   <ul>
                     <li>
-                    Creating web applications based on framework (MVC) 
-line Yii, Yii2 using languages PHP(OOP), JavaScript, JQuery, HTML5, CSS3
+                    Developed and maintained web applications using MVC frameworks such as Yii and Yii2
                     </li>
-                    <li>Creating dedicated modules and extensions (using composer)</li>
-                    <li>Preparing templates for newsletters and Landing pages</li>
-                    <li>Creating 
-relational databases in MySql</li>
-                    <li>Managing Database MySQL, PHPMyAdmin</li>
-                    <li>Programming with version control using SVN, GIT (editor NetBeans)</li>
-                    <li>Creating relational databases in MySql</li>
-                    <li>Management and configuration 
-of APACHE, PHP My Admin</li>
-                    <li>Working with 
-GIT, VIM , Workbench</li>
-                    <li> Contact with the customer</li>
-                    <li>Programming with Agile metodology
+                    <li> Utilized PHP (OOP), JavaScript, jQuery, HTML5, and CSS3 to create dynamic and responsive web pages</li>
+                    <li> Created dedicated modules and extensions using composer, a dependency manager for PHP</li>
+                    <li>Prepared and sent newsletters to clients using email marketing tools and best practices</li>
+                    <li> Designed and implemented relational databases in MySQL, following the principles of database 
+normalization</li>
+                    <li> Created professional documentation for applications using tools such as Sphinx and Doxygen</li>
+                    <li> Managed database operations using MySQL and PHPMyAdmin, performing tasks such as backup, restore, 
+and optimization</li>
+                    <li> Programmed with version control using SVN and GIT, using NetBeans as the preferred IDE</li>
+                    <li> Worked on Linux (Ubuntu) environment, using command-line tools and shell scripts</li>
+                    <li>  Communicated with customers to gather requirements, provide feedback, and deliver solutions</li>
+                    <li> Programmed with Agile methodology, participating in daily stand-ups, sprints, and retrospectives
                     </li>
                   </ul>
-                </p>
-
-              </Text>
+                  </Text>
             </AccordionPanel>
           </AccordionItem>
 
@@ -212,13 +213,13 @@ GIT, VIM , Workbench</li>
             borderRadius="9px"
             width="100%" // Set to 100% for devices with screen lower than 820px
             maxW="100%" // Set maximum width to 100% for all screens
-            marginBottom="50px"
+            marginbottom="50px"
             border="0px"
           >
             <AccordionButton
               width="100%" // Set to 100% for devices with screen lower than 820px
               maxW="100%" // Set maximum width to 100% for all screens
-              marginBottom="50px"
+              marginbottom="50px"
             >
               <Box flex="2" width="100%" textAlign="left"  w="100%">
                 <Center>
@@ -233,8 +234,9 @@ GIT, VIM , Workbench</li>
             <AccordionPanel bg="#fffde6">
               {/* Content of the sublist for Job Title 1 */}
               <Text textAlign="left" paddingLeft="30px">
-                <p>
+            
                   Responsibilities : 
+                  
                   <ul>
                     <li>
                     Creating documentation for millitary applications and 
@@ -243,8 +245,8 @@ modules in C language
                     </li>
                     <li>Looking for errors in application written in C language </li>
                   </ul>
-                </p>
-              </Text>
+              
+                  </Text> 
             </AccordionPanel>
           </AccordionItem>
 
@@ -253,19 +255,19 @@ modules in C language
             borderRadius="9px"
             width="100%" // Set to 100% for devices with screen lower than 820px
             maxW="100%" // Set maximum width to 100% for all screens
-            marginBottom="50px"
+            marginbottom="50px"
             border="0px"
           >
             <AccordionButton
               width="100%" // Set to 100% for devices with screen lower than 820px
               maxW="100%" // Set maximum width to 100% for all screens
-              marginBottom="50px"
+              marginbottom="50px"
             >
               <Box flex="2" width="100%" textAlign="left"h="120px"  w="100%">
                 <Center>
                   <Text fontWeight="bold" color="black" fontSize="20px" w="100%" paddingLeft="20px" paddingTop="30px">
                   04/2010—04/2012
-                  Programmer at Luxbit Sp. z o.o., Warsaw
+                  Programmer at Sunbajt Sp. z o.o., Warsaw
                   </Text>
                 </Center>
               </Box>
@@ -274,21 +276,25 @@ modules in C language
             <AccordionPanel bg="#fffde6">
               {/* Content of the sublist for Job Title 1 */}
               <Text textAlign="left" paddingLeft="30px">
-                <p>
+                
                   Responsibilities : 
+                
                   <ul>
                     <li>
-                    Writing applications in language Clipper and In C#
+                    Developed and deployed advanced web applications using PHP (structural) and JavaScript, without relying 
+on any frameworks
+
                     </li>
-                    <li>Looking for errors in application written in C language </li>
-                    <li>Technical support for applications</li>
-                    <li>Creation of technical 
-documentation for the libraries, programs, functions.</li>
-                    <li>Writing the HTML 
-interface libraries in C ++</li>
+                    <li> Designed and implemented relational databases in MySQL, following the principles of database 
+normalization and optimization
+ </li>
+                    <li> Provided customer support and troubleshooting for web applications, ensuring customer satisfaction and 
+retention
+</li>
+                    <li>Communicated with customers to gather requirements, provide feedback, and deliver solutions</li>
+                
                   </ul>
-                </p>
-              </Text>
+                  </Text> 
             </AccordionPanel>
           </AccordionItem>
 
@@ -297,13 +303,13 @@ interface libraries in C ++</li>
             borderRadius="9px"
             width="100%" // Set to 100% for devices with screen lower than 820px
             maxW="100%" // Set maximum width to 100% for all screens
-            marginBottom="50px"
+            marginbottom="50px"
             border="0px"
           >
             <AccordionButton
               width="100%" // Set to 100% for devices with screen lower than 820px
               maxW="100%" // Set maximum width to 100% for all screens
-              marginBottom="50px"
+              marginbottom="50px"
             >
               <Box flex="2" width="100%" textAlign="left" h="120px" w="100%">
                 <Center>
@@ -318,21 +324,25 @@ interface libraries in C ++</li>
             <AccordionPanel bg="#fffde6">
               {/* Content of the sublist for Job Title 1 */}
               <Text textAlign="left" paddingLeft="30px">
-                <p>
+                
                   Responsibilities : 
+                 
                   <ul>
                     <li>
-                    Writing applications in language Clipper and In C#
+                    Developed and maintained applications using Clipper, a programming language for DOS, in Visual 
+Flagship, an IDE and compiler for Clipper
                     </li>
-                    <li>Looking for errors in application written in C language </li>
-                    <li>Technical support for applications</li>
-                    <li>Creation of technical 
-documentation for the libraries, programs, functions.</li>
-                    <li>Writing the HTML 
-interface libraries in C ++</li>
+                    <li> Provided technical support for the accounting program, resolving issues and ensuring customer 
+satisfaction
+ </li>
+                    <li> Created technical documentation for the libraries, programs, and functions, using tools such as Doxygen 
+and Markdown</li>
+                    <li>Wrote HTML interface libraries in C++, enabling web-based access and interaction with the applications</li>
+                    <li> Synchronized between physical devices, such as automatic card barrier, and computer application, using 
+protocols such as TCP/IP and RS-232
+</li>
                   </ul>
-                </p>
-              </Text>
+                  </Text> 
             </AccordionPanel>
           </AccordionItem>
 
@@ -341,13 +351,13 @@ interface libraries in C ++</li>
             borderRadius="9px"
             width="100%" // Set to 100% for devices with screen lower than 820px
             maxW="100%" // Set maximum width to 100% for all screens
-            marginBottom="50px"
+            marginbottom="50px"
             border="0px"
           >
             <AccordionButton
               width="100%" // Set to 100% for devices with screen lower than 820px
               maxW="100%" // Set maximum width to 100% for all screens
-              marginBottom="50px"
+              marginbottom="50px"
             >
               <Box flex="2" width="100%" textAlign="left"h="120px"  w="100%">
                 <Center>
@@ -362,8 +372,9 @@ interface libraries in C ++</li>
             <AccordionPanel bg="#fffde6">
               {/* Content of the sublist for Job Title 1 */}
               <Text textAlign="left" paddingLeft="30px">
-                <p>
+              
                   Responsibilities : 
+                
                   <ul>
                     <li>
                     Learning about programation in C++, Html, writing macros for Excel, bash
@@ -374,8 +385,7 @@ interface libraries in C ++</li>
                     <li>Science of electronic subsystems in computing devices, binary systems </li>
                     
                   </ul>
-                </p>
-              </Text>
+                  </Text> 
             </AccordionPanel>
           </AccordionItem>
         </Accordion>

@@ -1,15 +1,11 @@
-// BigHeaderWithRandomWords.js
-
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, forwardRef } from 'react';
 import { useSpring, animated, useChain } from 'react-spring';
 import { Center } from "@chakra-ui/react";
 import '../css/skills.css';
 
 // AnimatedWord component to animate individual words
-const AnimatedWord = ({ text, index }) => {
+const AnimatedWord = forwardRef(({ text }, ref) => {
   const [isVisible, setIsVisible] = useState(false);
-
-  const wordRef = useRef();
 
   // Animation properties for each word
   const wordAnimation = useSpring({
@@ -23,20 +19,15 @@ const AnimatedWord = ({ text, index }) => {
   }, []);
 
   return (
-    <animated.div ref={wordRef} style={wordAnimation} className="animated-word">
+    <animated.div ref={ref} style={wordAnimation} className="animated-word">
       {text}
     </animated.div>
   );
-};
+});
 
 // RandomWordsContainer component to manage a collection of AnimatedWord components
 const RandomWordsContainer = ({ words }) => {
-  const wordRefs = useRef([]);
-
-  // Function to handle the reference for each AnimatedWord
-  const handleRef = (el, index) => {
-    wordRefs.current[index] = el;
-  };
+  const wordRefs = useRef(Array(words.length).fill(null).map(() => useRef(null)));
 
   // Use react-spring's useChain to coordinate animations
   useChain(wordRefs.current, [0], 1000);
@@ -44,7 +35,7 @@ const RandomWordsContainer = ({ words }) => {
   return (
     <div className="random-words-container">
       {words.map((word, index) => (
-        <AnimatedWord key={index} text={word} index={index} ref={(el) => handleRef(el, index)} />
+        <AnimatedWord key={index} text={word} ref={wordRefs.current[index]} />
       ))}
     </div>
   );
@@ -60,7 +51,7 @@ const BigHeaderWithRandomWords = ({ headerText, words }) => {
       </Center>
       {/* Description */}
       <Center>
-        <p className="skillsDesc">
+        <p class="skillsDesc" font-size="30px">
           I can set up and resolve IT problems across different operating systems, such as Windows, MAC, and Linux, as they relate to web hosting and application dependencies and configuration. This includes the network configuration, routers, VPNs, and CPanel management. I have a proven record of delivering successful projects over many years, so you can trust me with your IT needs.
         </p>
       </Center>

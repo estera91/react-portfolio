@@ -1,8 +1,9 @@
 // Import necessary React, Chakra UI components, and additional libraries
 import React from 'react';
-import { useForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form'; // Import reset
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
+import emailjs from 'emailjs-com'; // Import emailjs
 import {
   Box,
   Text,
@@ -15,7 +16,6 @@ import {
   Container
 } from '@chakra-ui/react';
 import AnimatedImage from './AnimatedImage';
-
 // Attribution for the image source
 const pictureRight2 = '<a href="https://www.freepik.com/free-vector/black-neural-network-illustration_3841810.htm#query=computer%20contact%20black%20white%20black%20background%20vector&position=34&from_view=search&track=ais&uuid=304fa186-ec32-4c11-8c17-624bcefc05b3">Image by rawpixel.com</a> on Freepik';
 const src1 = process.env.PUBLIC_URL + '/img/netw.png';
@@ -26,33 +26,31 @@ const schema = Yup.object().shape({
   email: Yup.string().email('Invalid email').required('Email is required'),
   subject: Yup.string().required('Subject is required'),
   message: Yup.string().required('Message is required'),
-  recaptcha: Yup.string().required('Please verify that you are not a robot'),
 });
+
+// Get your emailjs credentials from your dashboard and store them in constants
+const SERVICE_ID = 'service_24zgc7g';
+const TEMPLATE_ID = 'template_udlpatb';
+const USER_ID = '-vk6q1hcuScf1rXFb';
 
 // Functional component for the contact form
 const ContactForm = () => {
   // Use react-hook-form to manage form state and validation
-  const { register, handleSubmit, formState, setError } = useForm({
+  const { register, handleSubmit, formState, setError, reset } = useForm({
     resolver: yupResolver(schema),
   });
 
   // Function to handle form submission
   const onSubmit = async (data) => {
     const { name, email, subject, message } = data;
-
     try {
-      const response = await axios.post('/sendEmail', {
-        // Data from the form
-        to: 'estera.bulkiewicz@gmail.com',
-        subject: subject,
-        body: `
-          Name: ${name}\n
-          Email: ${email}\n
-          Message: ${message}
-        `,
-      });
-      console.log('Email sent:', response.data);
-      alert('Email sent successfully!');
+      // Use emailjs.sendForm to send the email with the form data and the email parameters
+      const response = await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, event.target, USER_ID);
+      console.log('Email sent:', response);
+      alert('Email sent successfully! I will contact You soon.');
+      // Call reset to clear the form fields
+      reset(); // Pass an empty object to reset
+
     } catch (error) {
       console.error('Error sending email:', error);
       setError('general', {
@@ -74,55 +72,36 @@ const ContactForm = () => {
         </Container>
 
         {/* Right Column - Contact Form */}
-        <Container maxWidth="600px">
-          <form onSubmit={handleSubmit(onSubmit)} marginBottom="50px" maxWidth="300px">
+        <Container maxwidth="600px">
+          <form  onSubmit={handleSubmit(onSubmit)} marginbottom="50px" maxwidth="300px">
             {/* Name Input */}
             <FormControl isInvalid={formState.errors.name}>
-              <Input placeholder="Name" {...register('name')} height="40px" bgColor="black" opacity="0.8" borderRadius="7px" marginBottom="10px" />
+              <Input placeholder="Name" {...register('name')} height="40px" bgColor="black" opacity="0.8" borderRadius="7px" marginbottom="10px" />
               <FormErrorMessage>{formState.errors.name?.message}</FormErrorMessage>
             </FormControl>
 
             {/* Email Input */}
             <FormControl mt={4} isInvalid={formState.errors.email}>
-              <Input type="email" placeholder="Email" {...register('email')} height="40px" bgColor="black" opacity="0.8" borderRadius="7px" marginBottom="10px" />
+              <Input type="email" placeholder="Email" {...register('email')} height="40px" bgColor="black" opacity="0.8" borderRadius="7px" marginbottom="10px" />
               <FormErrorMessage>{formState.errors.email?.message}</FormErrorMessage>
             </FormControl>
 
             {/* Subject Input */}
             <FormControl mt={4} isInvalid={formState.errors.subject}>
-              <Input placeholder="Subject" {...register('subject')} height="40px" bgColor="black" opacity="0.8" borderRadius="7px" marginBottom="10px" />
+              <Input placeholder="Subject" {...register('subject')} height="40px" bgColor="black" opacity="0.8" borderRadius="7px" marginbottom="10px" />
               <FormErrorMessage>{formState.errors.subject?.message}</FormErrorMessage>
             </FormControl>
 
-            {/* Message Textarea */}
+            {/* Message Input */}
             <FormControl mt={4} isInvalid={formState.errors.message}>
-              <Textarea placeholder="Message" {...register('message')} height="100px" bgColor="black" opacity="0.8" borderRadius="7px" marginBottom="10px" />
+              <Textarea placeholder="Message" {...register('message')} height="100px" bgColor="black" opacity="0.8" borderRadius="7px" marginbottom="10px" />
               <FormErrorMessage>{formState.errors.message?.message}</FormErrorMessage>
             </FormControl>
 
-            
-
             {/* Submit Button */}
-            <Button
-              mt={4}
-              colorScheme="orange"
-              color="black"
-              fontWeight="bold"
-              fontSize="xl"
-              type="submit"
-              bg="orange"
-              padding="20px 20px 20px 20px"
-              isLoading={formState.isSubmitting}
-              marginTop="30px"
-              borderRadius="10px"
-            >
-              Submit
+            <Button type="submit" colorScheme="orange" marginTop="10px" size="lg" width="100%" marginbottom="10px">
+              Send
             </Button>
-
-            {/* General Error Message */}
-            <FormErrorMessage mt={2} isInvalid={formState.errors.general}>
-              {formState.errors.general?.message}
-            </FormErrorMessage>
           </form>
         </Container>
       </Grid>
@@ -130,5 +109,4 @@ const ContactForm = () => {
   );
 };
 
-// Export the ContactForm component as the default export
 export default ContactForm;

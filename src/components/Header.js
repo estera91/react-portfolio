@@ -81,11 +81,11 @@ const Header = () => {
    transitionDuration=".3s"
    transitionTimingFunction="ease-in-out"
    backgroundColor="black"
-   ref={headerRef}
+   inputref={headerRef}
    zIndex="1000"
    > 
      {/* Header content within a Box with styling */}
-     <Box color="white" maxWidth="1280px" margin="0 auto" bgColor="black"> 
+     <Box color="white" maxwidth="1280px" margin="0 auto" bgColor="black"> 
        {/* HStack for horizontal alignment and spacing of elements */}
        <HStack 
          px={16} 
@@ -111,7 +111,7 @@ const Header = () => {
 
          {/* Navigation links for different sections */}
          <nav> 
-           <HStack spacing={8} class="headerMenu"> 
+           <HStack spacing={8} className="headerMenu"> 
              <a href="#skills" onClick={handleClick("contactme")}> 
                Skills 
              </a>

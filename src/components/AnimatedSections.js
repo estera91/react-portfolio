@@ -41,6 +41,7 @@ const AnimatedSections = () => {
   // Render the animated sections
   return (
     <div style={pageStyles} className="sekcjajeden" >
+     <Box>
       <Heading
         as="h1"
         align="right"
@@ -58,15 +59,18 @@ const AnimatedSections = () => {
         opacity="0.8"
       >
         Estera Bulkiewicz 
-        <p font-size="15px">Web Developer - IT Specialist</p> 
+        <p className="webDev" size="sm" font-size="15px">Web Developer - IT Specialist</p>
       </Heading>
+      
+       
+      </Box>
 
       {/* Animated Sections Container */}
-      <Center className="animated-sections-container" overflow="hidden">
+      <Center key="centerDes" className="animated-sections-container" overflow="hidden">
         {/* Description Box */}
-        <Box flex="60%" p="20px" bg="black" opacity="0.8" color="white" className="textDescBox"  animation="slideInLeft 1s ease-in-out" marginLeft='50px' fontSize="25px">
+        <Box key="boxForTypig" flex="60%" p="20px" bg="black" opacity="0.8" color="white" className="textDescBox"  animation="slideInLeft 1s ease-in-out" marginLeft='50px' fontSize="25px">
           {projects.map((project) => ( 
-            <TypingAnimation 
+            <TypingAnimation key={project.speed}
               text={project.text} 
               speed={project.speed} 
             /> 
@@ -79,9 +83,11 @@ const AnimatedSections = () => {
           p="20px"
           animation="slideInRight 1s ease-in-out"
           position="relative"
+          key="rightBox"
         >
-          <Center>
+          <Center key="imgCent">
             <Image
+              key="mojImg"
               position="absolute"
               padding="10px 10px 10px 10px"
               borderRadius="50%"

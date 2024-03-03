@@ -30,7 +30,7 @@ const Card = ({ title, description, imageSrc, url, clickImage }) => {
   // State to track modal open status
   const [isModalOpen, setIsModalOpen] = useState(false);
   // Media query hook to check if the screen width is above a certain value
-  const [isLargeScreen] = useMediaQuery("(min-width: 40em)");
+  const [isLargeScreen] = useMediaQuery("(minWidth: 40em)");
 
   // Effect to synchronize isOpen state with isModalOpen state
   useEffect(() => {
@@ -65,7 +65,7 @@ const Card = ({ title, description, imageSrc, url, clickImage }) => {
       cursor={clickImage ? "pointer" : "default"}
       width="100%"
       onClick={handleClick}
-      marginBottom="30px"
+      marginbottom="30px"
       padding="20px 20px 20px 20px"
       bg="orange"
       borderRadius="9px"

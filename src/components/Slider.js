@@ -81,7 +81,7 @@ const Slider = () => {
         <img
           src={getImageUrl()}
           alt={`Photo ${sliderValue}`}
-          style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'cover' , width:'100%'}}
+          style={{ maxwidth: '100%', maxHeight: '100%', objectFit: 'cover' , width:'100%'}}
         />
         <button onClick={handlePrevClick} style={arrowStyle}>
           {'<'}

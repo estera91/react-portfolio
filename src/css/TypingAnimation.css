@@ -27,13 +27,13 @@
   }
 }
 
-@media only screen and (min-width: 501px) and (max-width: 900px) {
+@media only screen and (minWidth: 501px) and (max-width: 900px) {
   .typing-animation {
     font-size: 16px; /* Adjust font size for medium screens */
   }
 }
 
-@media only screen and (min-width: 901px) and (max-width: 1027px) {
+@media only screen and (minWidth: 901px) and (max-width: 1027px) {
   .typing-animation {
     font-size: 18px; /* Adjust font size for large screens */
   }
