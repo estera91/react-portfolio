@@ -53,7 +53,7 @@ const ExperienceSection = () => {
             borderRadius="9px"
             width="100%" // Set to 100% for devices with screen lower than 820px
             maxW="100%" // Set maximum width to 100% for all screens
-            marginbottom="50px"
+            marginBottom="50px"
             border="0px"
           >
             <AccordionButton
@@ -109,13 +109,13 @@ management.
             borderRadius="9px"
             width="100%" // Set to 100% for devices with screen lower than 820px
             maxW="100%" // Set maximum width to 100% for all screens
-            marginbottom="50px"
+            marginBottom="50px"
             border="0px"
           >
             <AccordionButton
               width="100%" // Set to 100% for devices with screen lower than 820px
               maxW="100%" // Set maximum width to 100% for all screens
-              marginbottom="50px"
+              marginBottom="50px"
             >
               <Box flex="2" width="100%" textAlign="left" h="120px"  w="100%">
                 <Center>
@@ -163,13 +163,13 @@ database management</li>
             borderRadius="9px"
             width="100%" // Set to 100% for devices with screen lower than 820px
             maxW="100%" // Set maximum width to 100% for all screens
-            marginbottom="50px"
+            marginBottom="50px"
             border="0px"
           >
             <AccordionButton
               width="100%" // Set to 100% for devices with screen lower than 820px
               maxW="100%" // Set maximum width to 100% for all screens
-              marginbottom="50px"
+              marginBottom="50px"
             >
               <Box flex="2" width="100%" textAlign="left" h="120px" w="100%">
                 <Center>
@@ -213,13 +213,13 @@ and optimization</li>
             borderRadius="9px"
             width="100%" // Set to 100% for devices with screen lower than 820px
             maxW="100%" // Set maximum width to 100% for all screens
-            marginbottom="50px"
+            marginBottom="50px"
             border="0px"
           >
             <AccordionButton
               width="100%" // Set to 100% for devices with screen lower than 820px
               maxW="100%" // Set maximum width to 100% for all screens
-              marginbottom="50px"
+              marginBottom="50px"
             >
               <Box flex="2" width="100%" textAlign="left"  w="100%">
                 <Center>
@@ -255,13 +255,13 @@ modules in C language
             borderRadius="9px"
             width="100%" // Set to 100% for devices with screen lower than 820px
             maxW="100%" // Set maximum width to 100% for all screens
-            marginbottom="50px"
+            marginBottom="50px"
             border="0px"
           >
             <AccordionButton
               width="100%" // Set to 100% for devices with screen lower than 820px
               maxW="100%" // Set maximum width to 100% for all screens
-              marginbottom="50px"
+              marginBottom="50px"
             >
               <Box flex="2" width="100%" textAlign="left"h="120px"  w="100%">
                 <Center>
@@ -303,13 +303,13 @@ retention
             borderRadius="9px"
             width="100%" // Set to 100% for devices with screen lower than 820px
             maxW="100%" // Set maximum width to 100% for all screens
-            marginbottom="50px"
+            marginBottom="50px"
             border="0px"
           >
             <AccordionButton
               width="100%" // Set to 100% for devices with screen lower than 820px
               maxW="100%" // Set maximum width to 100% for all screens
-              marginbottom="50px"
+              marginBottom="50px"
             >
               <Box flex="2" width="100%" textAlign="left" h="120px" w="100%">
                 <Center>
@@ -351,13 +351,13 @@ protocols such as TCP/IP and RS-232
             borderRadius="9px"
             width="100%" // Set to 100% for devices with screen lower than 820px
             maxW="100%" // Set maximum width to 100% for all screens
-            marginbottom="50px"
+            marginBottom="50px"
             border="0px"
           >
             <AccordionButton
               width="100%" // Set to 100% for devices with screen lower than 820px
               maxW="100%" // Set maximum width to 100% for all screens
-              marginbottom="50px"
+              marginBottom="50px"
             >
               <Box flex="2" width="100%" textAlign="left"h="120px"  w="100%">
                 <Center>

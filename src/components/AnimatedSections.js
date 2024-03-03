@@ -40,15 +40,15 @@ const AnimatedSections = () => {
   const imgSrc = process.env.PUBLIC_URL + '/img/estera.jpg';
   // Render the animated sections
   return (
-    <div style={pageStyles} className="sekcjajeden" >
-     <Box>
+    <div style={pageStyles} class="sekcjajeden" >
+   
       <Heading
         as="h1"
         align="right"
         textAlign="center"
         py="2"
         size="lg"
-        max-width="900px"
+        maxWidth="900px"
         backgroundColor="black"
         paddingTop="70px"
         marginTop=""
@@ -61,9 +61,6 @@ const AnimatedSections = () => {
         Estera Bulkiewicz 
         <p className="webDev" size="sm" font-size="15px">Web Developer - IT Specialist</p>
       </Heading>
-      
-       
-      </Box>
 
       {/* Animated Sections Container */}
       <Center key="centerDes" className="animated-sections-container" overflow="hidden">

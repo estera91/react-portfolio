@@ -15,7 +15,7 @@ h1 {
   
 }
 .Experience li{
-  fontSize:20px
+  font-size:20px
 }
 .textDescBox p{
   text-align: justify;
@@ -81,22 +81,21 @@ h1 {
     text-align: right;
     padding-top: 70px;
     margin-left: 3%;
-    max-width:900px;
-    fontSize: 100px;
+    max-width:900px !important;
+    font-size: 100px;
     margin-bottom:300px
   }
 
-  p {
-    fontSize: 15px;
-  }
+ 
   .CertText p{
-    fontSize:20px !important;
+    font-size:20px !important;
     padding-bottom: 30px;
+    padding-top:40px !important;
     text-align: left;
     padding-left:20px;
   }
   .CertsHeading{
-    fontSize:70px;
+    font-size:70px;
     font-family: Arial, Helvetica, sans-serif;
   }
   .CertsContent{
@@ -113,7 +112,7 @@ h1 {
 }
 
 /* Medium screens (between 768px and 1023px) */
-@media only screen and (minWidth: 768px) and (max-width: 1700px) {
+@media only screen and (min-width: 768px) and (max-width: 1700px) {
    h1 {
     text-align: center;
     padding-top: 50px;

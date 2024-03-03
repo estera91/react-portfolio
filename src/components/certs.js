@@ -41,7 +41,7 @@ const MyComponent = () => {
           paddingTop="40px"
           fontSize="20px"
           borderRadius="9px"
-          class="CertText"
+          className="CertText"
           >
             <p  >Welcome to my journey of perpetual growth and exploration as a IT specialist and web developer.
             </p>
