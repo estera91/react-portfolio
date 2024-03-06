@@ -69,7 +69,7 @@ const ContactForm = () => {
 
   // JSX structure for rendering the contact form
   return (
-    <Box bgColor="black" color="white" p={8} paddingTop="0px" id="contactme" className="contact" height="80vh" bgImage={src1} >
+    <Box bgColor="black" color="white" p={8} paddingTop="15px" id="contactme" className="contact" height="80vh" bgImage={src1} >
       <Grid templateColumns={["1fr", null, "1fr 1fr"]} gap={0} marginBottom="40px">
         {/* Left Column */}
         <Container>
