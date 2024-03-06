@@ -65,7 +65,7 @@ const Card = ({ title, description, imageSrc, url, clickImage }) => {
       cursor={clickImage ? "pointer" : "default"}
       width="100%"
       onClick={handleClick}
-      marginbottom="30px"
+      marginBottom="30px"
       padding="20px 20px 20px 20px"
       bg="orange"
       borderRadius="9px"

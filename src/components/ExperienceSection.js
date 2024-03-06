@@ -61,9 +61,9 @@ const ExperienceSection = () => {
               maxW="100%" // Set maximum width to 100% for all screens
               marginbottom="50px"
             >
-              <Box flex="2" width="100%" textAlign="left"h="120px"  w="100%">
+              <Box flex="2" width="100%" textAlign="left" minHeight="120px"  w="100%">
                 <Center>
-                  <Text fontWeight="bold" color="black" fontSize="20px" w="100%" paddingLeft="20px" paddingTop="30px">
+                  <Text fontWeight="bold" color="black" fontSize="20px" w="100%" paddingLeft="20px" paddingTop="20px" paddingBottom="20px">
                   10/2019—Present  Freelance 
                   </Text>
                 </Center>
@@ -117,9 +117,9 @@ management.
               maxW="100%" // Set maximum width to 100% for all screens
               marginBottom="50px"
             >
-              <Box flex="2" width="100%" textAlign="left" h="120px"  w="100%">
+              <Box flex="2" width="100%" textAlign="left" minHeight="120px"  w="100%">
                 <Center>
-                  <Text fontWeight="bold" color="black" fontSize="20px" w="100%" paddingLeft="20px" paddingTop="30px">
+                  <Text fontWeight="bold" color="black" fontSize="20px" w="100%" paddingLeft="20px" paddingTop="20px" paddingBottom="20px">
                   05/2015—07/2019 PHP Programmer at Cube Group S. A., Warsaw
                   </Text>
                 </Center>
@@ -171,9 +171,9 @@ database management</li>
               maxW="100%" // Set maximum width to 100% for all screens
               marginBottom="50px"
             >
-              <Box flex="2" width="100%" textAlign="left" h="120px" w="100%">
+              <Box flex="2" width="100%" textAlign="left" minHeight="120px" w="100%">
                 <Center>
-                  <Text fontWeight="bold" color="black" fontSize="20px" w="100%" paddingLeft="20px" paddingTop="30px">
+                  <Text fontWeight="bold" color="black" fontSize="20px" w="100%" paddingLeft="20px" paddingTop="20px" paddingBottom="20px">
                   02/2013—05/2015
                   Junior programmer at Ce5 Sp Z o.o., Otwock
                   </Text>
@@ -223,7 +223,7 @@ and optimization</li>
             >
               <Box flex="2" width="100%" textAlign="left"  w="100%">
                 <Center>
-                  <Text fontWeight="bold" color="black"h="120px" fontSize="20px" w="100%" paddingLeft="20px" paddingTop="30px">
+                  <Text fontWeight="bold" color="black" minHeight="120px" fontSize="20px" w="100%" paddingLeft="20px" paddingTop="20px" paddingBottom="20px">
                   02/2013—04/2013
                   Junior programmer at WB Electronics, Warsaw
                   </Text>
@@ -263,9 +263,9 @@ modules in C language
               maxW="100%" // Set maximum width to 100% for all screens
               marginBottom="50px"
             >
-              <Box flex="2" width="100%" textAlign="left"h="120px"  w="100%">
+              <Box flex="2" width="100%" textAlign="left" minHeight="120px"  w="100%">
                 <Center>
-                  <Text fontWeight="bold" color="black" fontSize="20px" w="100%" paddingLeft="20px" paddingTop="30px">
+                  <Text fontWeight="bold" color="black" fontSize="20px" w="100%" paddingLeft="20px" paddingTop="20px" paddingBottom="20px">
                   04/2010—04/2012
                   Programmer at Sunbajt Sp. z o.o., Warsaw
                   </Text>
@@ -311,9 +311,9 @@ retention
               maxW="100%" // Set maximum width to 100% for all screens
               marginBottom="50px"
             >
-              <Box flex="2" width="100%" textAlign="left" h="120px" w="100%">
+              <Box flex="2" width="100%" textAlign="left" minHeight="120px" w="100%">
                 <Center>
-                  <Text fontWeight="bold" color="black" fontSize="20px" w="100%" paddingLeft="20px" paddingTop="30px">
+                  <Text fontWeight="bold" color="black" fontSize="20px" w="100%" paddingLeft="20px" paddingTop="20px" paddingBottom="20px" >
                   04/2010—04/2012
                   Programmer at Luxbit Sp. z o.o., Warsaw
                   </Text>
@@ -359,9 +359,9 @@ protocols such as TCP/IP and RS-232
               maxW="100%" // Set maximum width to 100% for all screens
               marginBottom="50px"
             >
-              <Box flex="2" width="100%" textAlign="left"h="120px"  w="100%">
+              <Box flex="2" width="100%" textAlign="left" minHeight="120px"  w="100%">
                 <Center>
-                  <Text fontWeight="bold" color="black" fontSize="20px"  w="100%" paddingLeft="20px" paddingTop="30px">
+                  <Text fontWeight="bold" color="black" fontSize="20px"  w="100%" paddingLeft="20px" paddingTop="20px" paddingBottom="20px">
                   Education :
                   09/2007—06/2011 IT Specialist, Technical nuclear school No. 2 in Otwock in Poland
                   </Text>

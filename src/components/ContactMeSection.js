@@ -13,7 +13,8 @@ import {
   Grid,
   FormControl,
   FormErrorMessage,
-  Container
+  Container,
+  useToast
 } from '@chakra-ui/react';
 import AnimatedImage from './AnimatedImage';
 // Attribution for the image source
@@ -39,7 +40,7 @@ const ContactForm = () => {
   const { register, handleSubmit, formState, setError, reset } = useForm({
     resolver: yupResolver(schema),
   });
-
+  const toast = useToast();
   // Function to handle form submission
   const onSubmit = async (data) => {
     const { name, email, subject, message } = data;
@@ -47,7 +48,13 @@ const ContactForm = () => {
       // Use emailjs.sendForm to send the email with the form data and the email parameters
       const response = await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, event.target, USER_ID);
       console.log('Email sent:', response);
-      alert('Email sent successfully! I will contact You soon.');
+      toast({
+        title: "Email sent successfully!",
+        description: "I will contact you soon.",
+        status: "success",
+        duration: 5000,
+        isClosable: true,
+      });
       // Call reset to clear the form fields
       reset(); // Pass an empty object to reset
 
@@ -62,44 +69,44 @@ const ContactForm = () => {
 
   // JSX structure for rendering the contact form
   return (
-    <Box bgColor="black" color="white" p={8} paddingTop="100px" id="contactme" className="contact" height="80vh" bgImage={src1}>
-      <Grid templateColumns="1fr 1fr" gap={8}>
+    <Box bgColor="black" color="white" p={8} paddingTop="0px" id="contactme" className="contact" height="80vh" bgImage={src1} >
+      <Grid templateColumns={["1fr", null, "1fr 1fr"]} gap={0} marginBottom="40px">
         {/* Left Column */}
         <Container>
-          <Text color="white" align="center" fontSize="30px">
+          <Text color="white" align="center" fontSize="30px" marginBottom="30px">
             Do you have any questions? Are you interested in establishing cooperation? Contact me!
           </Text>
         </Container>
 
         {/* Right Column - Contact Form */}
         <Container maxwidth="600px">
-          <form  onSubmit={handleSubmit(onSubmit)} marginbottom="50px" maxwidth="300px">
+          <form  onSubmit={handleSubmit(onSubmit)} marginBottom="100px" maxwidth="300px">
             {/* Name Input */}
             <FormControl isInvalid={formState.errors.name}>
-              <Input placeholder="Name" {...register('name')} height="40px" bgColor="black" opacity="0.8" borderRadius="7px" marginbottom="10px" />
+              <Input placeholder="Name" {...register('name')} height="40px" bgColor="black" opacity="0.8" borderRadius="7px" marginBottom="10px" />
               <FormErrorMessage>{formState.errors.name?.message}</FormErrorMessage>
             </FormControl>
 
             {/* Email Input */}
             <FormControl mt={4} isInvalid={formState.errors.email}>
-              <Input type="email" placeholder="Email" {...register('email')} height="40px" bgColor="black" opacity="0.8" borderRadius="7px" marginbottom="10px" />
+              <Input type="email" placeholder="Email" {...register('email')} height="40px" bgColor="black" opacity="0.8" borderRadius="7px" marginBottom="10px" />
               <FormErrorMessage>{formState.errors.email?.message}</FormErrorMessage>
             </FormControl>
 
             {/* Subject Input */}
             <FormControl mt={4} isInvalid={formState.errors.subject}>
-              <Input placeholder="Subject" {...register('subject')} height="40px" bgColor="black" opacity="0.8" borderRadius="7px" marginbottom="10px" />
+              <Input placeholder="Subject" {...register('subject')} height="40px" bgColor="black" opacity="0.8" borderRadius="7px" marginBottom="10px" />
               <FormErrorMessage>{formState.errors.subject?.message}</FormErrorMessage>
             </FormControl>
 
             {/* Message Input */}
             <FormControl mt={4} isInvalid={formState.errors.message}>
-              <Textarea placeholder="Message" {...register('message')} height="100px" bgColor="black" opacity="0.8" borderRadius="7px" marginbottom="10px" />
+              <Textarea placeholder="Message" {...register('message')} height="100px" bgColor="black" opacity="0.8" borderRadius="7px" marginBottom="10px" />
               <FormErrorMessage>{formState.errors.message?.message}</FormErrorMessage>
             </FormControl>
 
             {/* Submit Button */}
-            <Button type="submit" colorScheme="orange" marginTop="10px" size="lg" width="100%" marginbottom="10px">
+            <Button type="submit" colorScheme="orange" marginTop="10px" size="lg" width="100%" marginBottom="20px" >
               Send
             </Button>
           </form>

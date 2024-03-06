@@ -61,10 +61,10 @@ const ImageGallery = ({ imageUrls }) => {
               style={{
                 width: '100%',
                 '@media screen and (min-width: 40em)': {
-                  width: isTabletScreen ? '50%' : '33.33%',
+                  width: isTabletScreen ? '100%' : '100%',
                 },
                 '@media screen and (min-width: 60em)': {
-                  width: isLargeScreen ? '33.33%' : isTabletScreen ? '50%' : '100%',
+                  width: isLargeScreen ? '100%' : isTabletScreen ? '100%' : '100%',
                 },
                 marginTop: isLargeScreen ? '20px' : '10px',
               }}

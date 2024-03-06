@@ -3,7 +3,8 @@ import React, { useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; 
 import {  faGithub, faLinkedin,  
 } from "@fortawesome/free-brands-svg-icons"; 
-import { Box, HStack } from "@chakra-ui/react"; 
+import { Box, HStack, Menu, MenuButton, MenuList, MenuItem, IconButton } from "@chakra-ui/react"; // Import Menu components and IconButton
+import { HamburgerIcon } from '@chakra-ui/icons'; // Import hamburger icon
 
 // Array of social media links with corresponding icons
 const socials = [ 
@@ -111,11 +112,12 @@ const Header = () => {
 
          {/* Navigation links for different sections */}
          <nav> 
-           <HStack spacing={8} className="headerMenu"> 
-             <a href="#skills" onClick={handleClick("contactme")}> 
+           {/* HStack for large screens */}
+           <HStack spacing={8} className="headerMenu" display={["none", null, "flex"]}> 
+             <a href="#skills" onClick={handleClick("skills")}> 
                Skills 
              </a>
-             <a href="#certs" onClick={handleClick("contactme")}> 
+             <a href="#certs" onClick={handleClick("certs")}> 
                Certificats
              </a>
              <a href="#projects" onClick={handleClick("projects")}> 
@@ -128,11 +130,22 @@ const Header = () => {
                Contact Me 
              </a> 
            </HStack> 
+           {/* Menu for small screens */}
+           <Menu>
+             <MenuButton as={IconButton} icon={<HamburgerIcon />} display={["block", null, "none"]} /> 
+             <MenuList bgColor="grey">
+               <MenuItem bgColor="grey" onClick={handleClick("#skills")}><a href="#skills" w="100%">Skills</a></MenuItem>
+               <MenuItem bgColor="grey" onClick={handleClick("#certs")}><a href="#certs">Certificats</a></MenuItem>
+               <MenuItem bgColor="grey" onClick={handleClick("#projects")}><a href="#projects">Projects</a></MenuItem>
+               <MenuItem bgColor="grey" onClick={handleClick("#experience")}><a href="#experience">Experience</a></MenuItem>
+               <MenuItem bgColor="grey" onClick={handleClick("#contactme")}><a href="#contactme">Contact Me</a></MenuItem>
+             </MenuList>
+           </Menu>
          </nav> 
        </HStack> 
      </Box> 
    </Box> 
  ); 
-}; 
+};
 
-export default Header; 
+export default Header;

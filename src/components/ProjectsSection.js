@@ -77,6 +77,7 @@ const ProjectsSection = () => {
         {/* Map through the projects array and render a Card component for each project */}
         {projects.map((project) => (
           <Card
+            
             key={project.title}
             title={project.title}
             description={project.description}

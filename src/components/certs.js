@@ -15,10 +15,10 @@ const MyComponent = () => {
   ];
   
   return (
-    <Box id="certs" bgColor="black" color="white" p={8}  class="CertsContent">
-      <Grid templateColumns="1fr 1fr" gap={8}>
+    <Box id="certs" bgColor="black" color="white" p={8}  className="CertsContent">
+      <Grid templateColumns="1fr 1fr" gap={1}>
         {/* Section 1: Photo Gallery with Certificates */}
-        <Box>
+        <Box width="100%">
           <ShowPhotos imageUrls={images}  bg="black" />
         </Box>
 
