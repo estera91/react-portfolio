@@ -30,9 +30,9 @@ const schema = Yup.object().shape({
 });
 
 // Get your emailjs credentials from your dashboard and store them in constants
-const SERVICE_ID = 'xxx';
-const TEMPLATE_ID = 'xxx';
-const USER_ID = 'xxx';
+const SERVICE_ID = 'service_24zgc7g';
+const TEMPLATE_ID = 'template_udlpatb';
+const USER_ID = '-vk6q1hcuScf1rXFb';
 
 // Functional component for the contact form
 const ContactForm = () => {
